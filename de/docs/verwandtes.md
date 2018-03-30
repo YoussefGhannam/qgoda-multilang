@@ -1,3 +1,3 @@
 ---
-master: /en/docs/related
+master: /en/docs/related.md
 ---

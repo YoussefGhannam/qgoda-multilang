@@ -4,14 +4,17 @@ name: archives
 date: 2018-01-28
 tags: [ Archives, Listings, Pagination, Cloning, Virtual Pages, Templates ]
 ---
+<!--QGODA-NO-XGETTEXT-->
 [% USE q = Qgoda %]
 [% TAGS [@ @] %]
+<!--/QGODA-NO-XGETTEXT-->
 Archives of posts are explained in great detail on the [Qgoda website](http://www.qgoda.net/en/docs/archives/), so you should look there for starters.
 
 Even without reading the detailed documentation, the source code of [`_views/components/archive/aside.html`](https://github.com/gflohr/qgoda-essential/blob/master/_views/components/archive/aside.html) should be pretty self-explanatory.  In case you haven't guessed so already: It generates the list of archive pages in the right column of this page.
 
 The tricky part is again the generation of an unknown, arbitrary number of archive pages.  And again, it's the [cloning feature](http://www.qgoda.net/en/docs/cloning/) that comes to our rescue.  This is the source code of `archive/index.md`:
 
+<!--QGODA-NO-XGETTEXT-->
 ```yaml
 ---
 virtual: 1
@@ -34,6 +37,7 @@ virtual: 1
   [% INCLUDE components/listing.html filters = filters %]
 [% END %]
 ```
+<!--/QGODA-NO-XGETTEXT-->
 
 Just a little bit more messy than pagination ...
 

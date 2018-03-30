@@ -12,6 +12,7 @@ Even without reading the detailed documentation, the source code of [`_views/com
 
 The tricky part is again the generation of an unknown, arbitrary number of tag pages.  And again, it's the [cloning feature](http://www.qgoda.net/en/docs/cloning/) that comes to our rescue.  This is the source code of `en/tags/index.md`:
 
+<!--QGODA-NO-XGETTEXT-->
 ```yaml
 ---
 virtual: 1
@@ -35,6 +36,7 @@ type: page
   [% INCLUDE components/listing.html filters = filters %]
 [% END %]
 ```
+<!--QGODA-NO-XGETTEXT-->
 
 It bears an amazing similarity with the code for [archives]([@ q.llink(name = 'archives') @]).  The only noteworthy thing is the function `q.taxonomyValues()` which gives you the complete set of values for a certain taxonomy, in this case the taxonomy `tags`.
 

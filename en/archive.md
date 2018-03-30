@@ -2,6 +2,7 @@
 type: page
 virtual: 1
 ---
+<!--QGODA-NO-XGETTEXT-->
 [% USE q = Qgoda %]
 
 [% IF !asset.parent %]
@@ -22,3 +23,4 @@ virtual: 1
   [% filters = { 'date.year' = year 'date.imonth' = imonth } %]
   [% INCLUDE components/listing.html filters = filters %]
 [% END %]
+<!--/QGODA-NO-XGETTEXT-->

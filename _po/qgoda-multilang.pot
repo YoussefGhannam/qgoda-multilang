@@ -116,17 +116,1176 @@ msgid "About"
 msgstr ""
 
 #: ../de/index.md:
-msgctxt "subtitle"
-msgid ""
-msgstr ""
-
-#: ../de/index.md:
 msgctxt "title"
 msgid ""
 msgstr ""
 
-#: ../de/index.md:
+#: ../de/index.md:3
+msgctxt "subtitle"
+msgid ""
+msgstr ""
+
+#: ../de/index.md:4
 msgctxt "tags"
 msgid ""
+msgstr ""
+
+#: ../en/about.md:2
+msgctxt "title"
+msgid "About Qgoda-Default"
+msgstr ""
+
+#: ../en/about.md:6
+msgid ""
+"This is a project seed for [Qgoda](http://www.qgoda.net/).  It comes with\n"
+"module bundling via [webpack](https://webpack.js.org/) and advanced web\n"
+"development features,\n"
+"a development web server, it shows Qgoda best practices and example code for\n"
+"almost all functionality available in Qgoda.  It is intended for web developers\n"
+"that want to start designing their personal build process from a standard web \n"
+"development environment."
+msgstr ""
+
+#: ../en/about.md:14
+msgid ""
+"See [https://github.com/[% config.theme_repo %]](https://github.com/[% config.theme_repo %])\n"
+"for instructions on how to use this theme. The pages below give you a detailed\n"
+"insight into the internals of the theme.  The default site serves its own documentation."
+msgstr ""
+
+#: ../en/archive.md:
+msgctxt "title"
+msgid "archive"
+msgstr ""
+
+#: ../en/docs/archives.md:2
+msgctxt "title"
+msgid "Archives"
+msgstr ""
+
+#: ../en/docs/archives.md:5 ../en/docs/tags.md:5
+msgctxt "tags.1"
+msgid "Listings"
+msgstr ""
+
+#: ../en/docs/archives.md:5 ../en/docs/tags.md:5
+msgctxt "tags.2"
+msgid "Pagination"
+msgstr ""
+
+#: ../en/docs/archives.md:5
+msgctxt "tags.0"
+msgid "Archives"
+msgstr ""
+
+#: ../en/docs/archives.md:5 ../en/docs/tags.md:5
+msgctxt "tags.4"
+msgid "Virtual Pages"
+msgstr ""
+
+#: ../en/docs/archives.md:5 ../en/docs/tags.md:5
+msgctxt "tags.5"
+msgid "Templates"
+msgstr ""
+
+#: ../en/docs/archives.md:5 ../en/docs/tags.md:5
+msgctxt "tags.3"
+msgid "Cloning"
+msgstr ""
+
+#: ../en/docs/archives.md:11
+msgid "Archives of posts are explained in great detail on the [Qgoda website](http://www.qgoda.net/en/docs/archives/), so you should look there for starters."
+msgstr ""
+
+#: ../en/docs/archives.md:13
+msgid "Even without reading the detailed documentation, the source code of [`_views/components/archive/aside.html`](https://github.com/gflohr/qgoda-essential/blob/master/_views/components/archive/aside.html) should be pretty self-explanatory.  In case you haven't guessed so already: It generates the list of archive pages in the right column of this page."
+msgstr ""
+
+#: ../en/docs/archives.md:15
+msgid "The tricky part is again the generation of an unknown, arbitrary number of archive pages.  And again, it's the [cloning feature](http://www.qgoda.net/en/docs/cloning/) that comes to our rescue.  This is the source code of `archive/index.md`:"
+msgstr ""
+
+#: ../en/docs/archives.md:42
+msgid "Just a little bit more messy than pagination ..."
+msgstr ""
+
+#: ../en/docs/archives.md:44
+msgid "You can see that the document is a [virtual document](http://www.qgoda.net/en/docs/virtual-documents/).  It will be processed but not rendered (written to disk)."
+msgstr ""
+
+#: ../en/docs/archives.md:46
+msgid "The variable `asset.parent` is set if the document is a clone of another document.  If it is not, we iterate over all months (for all years) in a nested loop, hard-code a location for the clone, and call clone with the necessary parameters to inject."
+msgstr ""
+
+#: ../en/docs/archives.md:48
+msgid "Iff the document has a parent, it is the product of a call to `q.clone()` above, and we generate a listing.  And if that listing happens to contain entries than fit on one page, these listings will also be paginated."
+msgstr ""
+
+#: ../en/docs/archives.md:50
+msgid "Note that each clone will have `start` reset to 0 so that the pagination restarts at the beginning."
+msgstr ""
+
+#: ../en/docs/archives.md:52
+msgid "Now move on to [@ q.lanchor(name = 'tags') @] for learning how to deal with tags (or categories or whatever other taxonomy you like)."
+msgstr ""
+
+#: ../en/docs/configuration.md:2
+msgctxt "title"
+msgid "Configuration"
+msgstr ""
+
+#: ../en/docs/configuration.md:5 ../en/docs/css-and-javascript.md:5
+#: ../en/docs/nodejs.md:5 ../en/docs/site-structure.md:5
+#: ../en/docs/templates.md:5
+msgctxt "tags.0"
+msgid "General"
+msgstr ""
+
+#: ../en/docs/configuration.md:5
+msgctxt "tags.1"
+msgid "Configuration"
+msgstr ""
+
+#: ../en/docs/configuration.md:10
+msgid "Qgoda's main configuration file is `_config.yaml`.  Note that you currently have to [restart Qgoda]([% q.llinkPost(name = 'starting-qgoda') %]) in order to take changes to the configuration into effect."
+msgstr ""
+
+#: ../en/docs/configuration.md:12
+msgid "The source of the configuration comes from the theme file [`_init.yaml`](https://github.com/gflohr/qgoda-essential/blob/master/_init.yaml) that does not get installed with the theme.  Instead, it is used for initializing `_config.yaml` or gets merged into an already existing `_config.yaml`."
+msgstr ""
+
+#: ../en/docs/configuration.md:14
+msgid "## Defaults"
+msgstr ""
+
+#: ../en/docs/configuration.md:16
+msgid "You can set some default variables for documents from within `_config.yaml`:"
+msgstr ""
+
+#: ../en/docs/configuration.md:37
+msgid "This sets default values for the variables `author`, `lingua`, `organization`, and `type` for all files ending in `.md` (that are all markdown documents)."
+msgstr ""
+
+#: ../en/docs/configuration.md:39
+msgid "The variable `lingua` is universally used in Qgoda for holding a standard HTTP language identifier like `en-US` or `de-DE` or the like as set forth in [RFC5646](http://www.rfc-editor.org/rfc/rfc5646.txt).  Although this theme is a single-language theme, it is strongly recommended to set the language of the content contained.  This is not only good practice:"
+msgstr ""
+
+#: ../en/docs/configuration.md:51
+msgid "It also simplifies a future migration to a multi-language site, and you never know, do you?"
+msgstr ""
+
+#: ../en/docs/configuration.md:53
+msgid "The next rule for `index.md` and `index-*.md` overrides the value `type` for these documents, and also sets the rendering priority for these documents.  See [% q.lanchor(name = 'listings') %] for an explanation of the variable `priority`."
+msgstr ""
+
+#: ../en/docs/configuration.md:55
+msgid "You can find a detailed explanation for setting document defaults in `_config.yaml` at http://www.qgoda.net/en/docs/defaults.html."
+msgstr ""
+
+#: ../en/docs/configuration.md:57
+msgid "## Markdown Processor Chain"
+msgstr ""
+
+#: ../en/docs/configuration.md:59
+msgid "As described in [[% q.lxref('title', name = 'installation') %]]([% q.llinkPost(name = 'installation') %]#hoedown), it is preferable to use the Hoedown markdown processor instead of the regular one.  This is achieved by re-configuring the processor chain for markdown files:"
+msgstr ""
+
+#: ../en/docs/configuration.md:72
+msgid "That boils down to: Use the processor module `TT2` ([Template Toolkit](http://www.template-toolkit.org/)) and then the module `Hoedown` for processing markdown files.  See http://www.qgoda.net/en/docs/processor-chains/ for a more in-depth explanation of processor chains."
+msgstr ""
+
+#: ../en/docs/configuration.md:74
+msgid "## Site Title"
+msgstr ""
+
+#: ../en/docs/configuration.md:76
+msgid "The configuration variable `title` is by convention used for giving a title to the entire site.  You will probably want to change that value."
+msgstr ""
+
+#: ../en/docs/configuration.md:78
+msgid "## Helpers"
+msgstr ""
+
+#: ../en/docs/configuration.md:80
+msgid "[Helpers](http://www.qgoda.net/en/docs/) are programs that are started in parallel to Qgoda in watch mode.  This theme only uses one helper:"
+msgstr ""
+
+#: ../en/docs/configuration.md:89
+msgid "The helper with the symbolic name `browser-sync` will issue the command `npm run server` which starts a web server.  If you want to enhance the site design with more tools from the [NodeJS](https://nodejs.org/en/) eco system, for example [Webpack](https://webpack.js.org/)\n"
+", [Gulp](https://gulpjs.com/), or [Grunt](https://gruntjs.com/), you will probably want to extend that to:"
+msgstr ""
+
+#: ../en/docs/configuration.md:116
+msgid "Please refer to [% q.lanchor(name = 'template-setup') %] for more information."
+msgstr ""
+
+#: ../en/docs/configuration.md:118
+msgid "## Other Configuration Variables"
+msgstr ""
+
+#: ../en/docs/configuration.md:120
+msgid "See http://www.qgoda.net/en/docs/configuration-variables/ for a complete list of configuration variables."
+msgstr ""
+
+#: ../en/docs/css-and-javascript.md:2
+msgctxt "title"
+msgid "CSS and JavaScript"
+msgstr ""
+
+#: ../en/docs/css-and-javascript.md:5 ../en/docs/nodejs.md:5
+msgctxt "tags.2"
+msgid "JavaScript"
+msgstr ""
+
+#: ../en/docs/css-and-javascript.md:5
+msgctxt "tags.1"
+msgid "CSS"
+msgstr ""
+
+#: ../en/docs/css-and-javascript.md:7
+msgid "[% USE q = Qgoda %]\n"
+"This theme also contains some rudimentary JavaScript and a bunch of CSS rules jotted down by an obviously lousy web developer.  These files merelye serve as placeholders or starting points for your own improvements."
+msgstr ""
+
+#: ../en/docs/css-and-javascript.md:10
+msgid "The JavaScript file `assets/js/site.js` just removes the `no-js` class from the document's `<html>` element.  And you can find the CSS for the theme in `assets/css/styles.css`.  Pull requests for the CSS are always welcome!"
+msgstr ""
+
+#: ../en/docs/css-and-javascript.md:12
+msgid "If you want to do some serious face-lifting, move on to [% q.lanchor(name = 'nodejs') %] and learn how to integrate a state-of-the-art development environment to your Qgoda site."
+msgstr ""
+
+#: ../en/docs/listings.md:2
+msgctxt "title"
+msgid "Listings"
+msgstr ""
+
+#: ../en/docs/listings.md:5
+msgctxt "tags.0"
+msgid "Listings"
+msgstr ""
+
+#: ../en/docs/listings.md:5
+msgctxt "tags.3"
+msgid "Templates"
+msgstr ""
+
+#: ../en/docs/listings.md:5
+msgctxt "tags.2"
+msgid "Cloning"
+msgstr ""
+
+#: ../en/docs/listings.md:5
+msgctxt "tags.1"
+msgid "Pagination"
+msgstr ""
+
+#: ../en/docs/listings.md:11
+msgid "Listings of posts are explained in great detail on the [Qgoda website](http://www.qgoda.net/en/docs/listings/), so you should look there for starters.  Here, we will just cover the things that are special in this theme."
+msgstr ""
+
+#: ../en/docs/listings.md:13
+msgid "## General Syntax"
+msgstr ""
+
+#: ../en/docs/listings.md:15
+msgid "Listings, in general, take one of the following forms in Qgoda:"
+msgstr ""
+
+#: ../en/docs/listings.md:27
+msgid "This will list all posts in the site that have the same language, and sort them by date in descending order.  By the way, `llistPosts()` is not a typo but the equivalent of this:"
+msgstr ""
+
+#: ../en/docs/listings.md:35
+msgid "The leading \"l\" in `llistPosts` stands for `lingua`, and automatically adds a filter that only selects posts in the same language as the listing page itself."
+msgstr ""
+
+#: ../en/docs/listings.md:37
+msgid "And the invocation of `listPosts` is actually a synonym for this:"
+msgstr ""
+
+#: ../en/docs/listings.md:45
+msgid "## Parametrizing Listings"
+msgstr ""
+
+#: ../en/docs/listings.md:47
+msgid "When you look into the source code of [`_views/components/listing.html`](https://github.com/gflohr/qgoda-essential/blob/master/_views/components/listing.html) you will probably find that this is not for the faint of heart.  It looks like it would be a good idea to parametrize the listing so that it can be reused for different types of listings.  This is easy:"
+msgstr ""
+
+#: ../en/docs/listings.md:55
+msgid "Now the variable `filters` can contain arbitrary filters.  If you `INCLUDE` the component without filters, the default will be used, that lists *all* posts like show on the [start page]([% q.llink(name = 'home') %])."
+msgstr ""
+
+#: ../en/docs/listings.md:57
+msgid "But you can also search for all posts from June 2015 like this:"
+msgstr ""
+
+#: ../en/docs/listings.md:67
+msgid "Or search for all posts for the tag 'CSS':"
+msgstr ""
+
+#: ../en/docs/listings.md:76
+msgid "## Combining Listings With Pagination"
+msgstr ""
+
+#: ../en/docs/listings.md:78
+msgid "You will often distribute long listings over multiple pages.  This is called *pagination* and explained at http://www.qgoda.net/en/docs/pagination/.  The general principle is simple.  Instead of iterating directly ver the list, you feed the set of posts into the Qgoda plug-in function `paginate()`:"
+msgstr ""
+
+#: ../en/docs/listings.md:89
+msgid "The parameters `start` and `total` are mandatory. The parameter `per_page` defaults to 10 (and could be omitted here).  The method does really not do anything special or things that could not be done in regular Template Toolkit code.  It has the main advantage that all the necessary computations are done in Perl (and therefore faster).  If you dump the result of the function into the rendered page, it should be pretty obvious how to use it for generating a list of links to the individual pages."
+msgstr ""
+
+#: ../en/docs/listings.md:91
+msgid "But that is the trivial part of pagination.  We now must generate an unknown number of more listing pages.  The first page displays posts number 1 to 10, the second one number 11 to 20 and so on, and we do not know how many we need."
+msgstr ""
+
+#: ../en/docs/listings.md:93
+msgid "The solution used by Qgoda is embarrassingly simple: Qgoda documents have the ability to *reproduce*.  You can create an exact clone of the document currently being rendered but you can (and must!) inject a little bit of mutated DNA:"
+msgstr ""
+
+#: ../en/docs/listings.md:103
+msgid "The method `Qgoda.clone()` has one mandatory named argument, the `location` of the cloned document and `Qgoda.paginate()` was kind enough to return a suitable location in the variable `p.next_location` as well as the starting index of the next listing window in `p.next_start`.  Note that all parameters (`location`, `start`, ...) end up as asset variables (`asset.location`, `asset.start`, ...) in the clone document."
+msgstr ""
+
+#: ../en/docs/listings.md:105
+msgid "The effect of all this is that the listings duplicate themselves until they have covered the entire set of posts.  Simple, isn't it?"
+msgstr ""
+
+#: ../en/docs/listings.md:107
+msgid "## Mixing TT2 Code With Markdown"
+msgstr ""
+
+#: ../en/docs/listings.md:109
+msgid "Listings will very often be generated as part of Markdown documents.  That offers some very nasty pitfalls for you.  Read the [online documentation](http://www.qgoda.net/en/docs/mixing-markdown-with-template-code/) for all the gory details."
+msgstr ""
+
+#: ../en/docs/listings.md:111
+msgid "In brief: Markdown will occasionally throw in `<p>` elements, where the template processor left whitespace behind.  With Template Toolkit you can avoid that by using the whitespace consuming form of tags:"
+msgstr ""
+
+# QGODA-NO-XGETTEXT
+#: ../en/docs/listings.md:113
+msgid ""
+"```tt2\n"
+"[%- IF something -%]\n"
+"blab\n"
+"[%- END -%]\n"
+"```\n"
+"<!--QGODA-NO-XGETTEXT-->"
+msgstr ""
+
+#: ../en/docs/listings.md:121
+msgid "The form `[%- ... -%]` will eat up all adjacent whitespace and fix the problem."
+msgstr ""
+
+#: ../en/docs/listings.md:123
+msgid "You can continue with [@ q.lanchor(name = 'archives') @] from here."
+msgstr ""
+
+#: ../en/docs/nodejs.md:2
+msgctxt "title"
+msgid "NodeJS"
+msgstr ""
+
+#: ../en/docs/nodejs.md:5
+msgctxt "tags.1"
+msgid "NodeJS"
+msgstr ""
+
+#: ../en/docs/nodejs.md:5
+msgctxt "tags.3"
+msgid "CSS"
+msgstr ""
+
+#: ../en/docs/nodejs.md:5
+msgctxt "tags.4"
+msgid "Helpers"
+msgstr ""
+
+#: ../en/docs/nodejs.md:7
+msgid "This theme has focused on Qgoda features, and how to use them for generating web sites with very flexible structures.  For serious web development, you will want to improve the way JavaScript, CSS, and other resource are processed and handled.  Fortunately, it is very simple to integrate all kinds of tools from the [nodejs](https://nodejs.org/en/) eco system into your Qgoda site."
+msgstr ""
+
+#: ../en/docs/nodejs.md:9
+msgid "The first step should be editing `package.json`.  It currently contains only one script entry \"server\" for starting the development web server [Browsersync](https://browsersync.io/).  You should add the script(s) for your development environment:"
+msgstr ""
+
+#: ../en/docs/nodejs.md:11
+msgid ""
+"```json\n"
+"\"scripts\": {\n"
+"    \"preserver\": \"yarn install\",\n"
+"    \"server\": \"browser-sync start --server _site --files _timestamp\",\n"
+"    \"prebuild\": \"yarn install\",\n"
+"    \"build\": \"webpack --progress --colors\",\n"
+"    \"prestart\": \"yarn install\",\n"
+"    \"start\": \"webpack --progress --colors\",\n"
+"    \"test\": \"echo \\\"Error: no test specified\\\"; exit 1\"\n"
+"}\n"
+"```"
+msgstr ""
+
+#: ../en/docs/nodejs.md:23
+msgid "Note that Browsersync is instructed to only watch the file `_timestamp` for changes and reload pages in the connected browsers.  The file `_timestamp` will be updated by Qgoda only, after a site has been completely rebuilt.  Letting the web server only watch that timestamp file avoids annoying rebuild loops of the tools involved."
+msgstr ""
+
+#: ../en/docs/nodejs.md:25
+msgid "Running `yarn start` or `npm start` in another terminal window will now fire up webpack and let you bundle all your assets.  But it is easier to let Qgoda run this automatically.  Change [`_config.yaml`]([% q.llink(name = 'configuration') %]) and add a second helper:"
+msgstr ""
+
+#: ../en/docs/nodejs.md:27
+msgid ""
+"```yaml\n"
+"helpers:\n"
+"  yarn: yarn start\n"
+"  browser-sync: yarn run server\n"
+"```"
+msgstr ""
+
+#: ../en/docs/nodejs.md:33
+msgid "Restart qgoda, and that's it.  Qgoda, webpack, and Browsersync all run in parallel, updating stuff only when needed."
+msgstr ""
+
+#: ../en/docs/nodejs.md:35
+msgid "If you don't feel like implementing everything from scratch, you may consider installing the theme [qgoda-default](https://github.com/gflohr/qgoda-default/) which contains a complete setup with [webpack](https://webpack.js.org/), [Browsersync](https://browsersync.io/), [Twitter Bootstrap](https://getbootstrap.com/), [PostCSS](http://postcss.org/), syntax highlighting with [PrismJS](http://prismjs.com/) and even CSS modules."
+msgstr ""
+
+#: ../en/docs/related.md:2
+msgctxt "title"
+msgid "Related Documents"
+msgstr ""
+
+#: ../en/docs/related.md:5
+msgctxt "tags.0"
+msgid "Related Documents"
+msgstr ""
+
+#: ../en/docs/related.md:5 ../en/docs/templates.md:5
+msgctxt "tags.1"
+msgid "Templates"
+msgstr ""
+
+#: ../en/docs/related.md:7
+msgid ""
+"[% USE q = Qgoda %]\n"
+"[% TAGS [@ @] %]\n"
+"You can learn how Qgoda calculates which documents are related respectively similar on the [Qgoda website](http://www.qgoda.net/en/docs/tags/).  Displaying related documents is very simple:"
+msgstr ""
+
+#: ../en/docs/related.md:11
+msgid "See `_views/components/related.html`:"
+msgstr ""
+
+#: ../en/docs/related.md:13
+msgid ""
+"```tt2\n"
+"[% USE q = Qgoda %]\n"
+"[% USE gtx = Gettext(config.po.textdomain, asset.lingua) %]\n"
+"[% IF !threshold %][% threshold = 3 %][% END %]\n"
+"[% IF !count %][% count = 5 %][% END %]\n"
+"[% docs = q.lrelated(threshold, type = 'post').splice(0, count - 1) %]\n"
+"[% IF docs.size %]\n"
+"  <h2 class=\"related-h\">[% gtx.gettext('Related') %]</h2>\n"
+"  <ul class=\"related-list\">\n"
+"    [% FOREACH doc IN docs %]\n"
+"    <li><a href=\"[% doc.permalink %]\">[% doc.title | html %]</a></li>\n"
+"    [% END %]\n"
+"  </ul>\n"
+"[% END %]\n"
+"```"
+msgstr ""
+
+#: ../en/docs/related.md:29
+msgid "The heart of it all is the call to `q.lrelated()`:"
+msgstr ""
+
+#: ../en/docs/related.md:31
+msgid ""
+"```tt2\n"
+"[% docs = q.lrelated(threshold, type = 'post').splice(0, count - 1) %]\n"
+"```"
+msgstr ""
+
+#: ../en/docs/related.md:35
+msgid "The first argument is the threshhold for the relationship value.  That avoids that random documents are displayed, when nothing related can be found."
+msgstr ""
+
+#: ../en/docs/related.md:37
+msgid "Following the threshold is the now well known list of additional filters.  The resulting list can then be cut to a maximum size (variable `count`).  The rest should be self-explanatory."
+msgstr ""
+
+#: ../en/docs/related.md:39
+msgid "Now that all relevant features of this theme are covered, you may want to move on to [@ q.lanchor(name = 'nodejs') @] if you want to learn how to add modern web development features to the theme."
+msgstr ""
+
+#: ../en/docs/site-structure.md:2
+msgctxt "title"
+msgid "Site Structure"
+msgstr ""
+
+#: ../en/docs/site-structure.md:5
+msgctxt "tags.1"
+msgid "Files and Directories"
+msgstr ""
+
+#: ../en/docs/site-structure.md:7
+msgid ""
+"[% USE q = Qgoda %]\n"
+"The files and directories in this Qgoda project follow a pretty standard\n"
+"structure for a Qgoda site:"
+msgstr ""
+
+#: ../en/docs/site-structure.md:11
+msgid ""
+"```shell\n"
+"_config.yaml\n"
+"_site/\n"
+"_views/\n"
+"  components/\n"
+"  default.html\n"
+"  functions/\n"
+"  partials/\n"
+"    body.html\n"
+"    head.html\n"
+"  wrappers/\n"
+"archive/\n"
+"assets/\n"
+"docs/\n"
+"tags/\n"
+"```"
+msgstr ""
+
+#: ../en/docs/site-structure.md:28 ../en/docs/template-setup.md:11
+msgid "<qgoda-toc/>"
+msgstr ""
+
+#: ../en/docs/site-structure.md:30
+msgid "## `_config.yaml`"
+msgstr ""
+
+#: ../en/docs/site-structure.md:32
+msgid "This is the main [configuration]([% q.llink(name = 'configuration') %]) for Qgoda.  Note that this file is only present, when you have [installed]([% q.llink(name = 'installation') %]) the theme with `qgoda init`.  In the theme sources, you will see the file [`_init.yaml`](https://github.com/[% config.theme_repo %]/blob/master/_init.yaml) that `_config.yaml` is generated from."
+msgstr ""
+
+#: ../en/docs/site-structure.md:34
+msgid "## `_site/`"
+msgstr ""
+
+#: ../en/docs/site-structure.md:36
+msgid "This directory contains the web site generated by Qgoda.  You should deploy the contents of this directory to the document root of your web server."
+msgstr ""
+
+#: ../en/docs/site-structure.md:38
+msgid "## `_views/`"
+msgstr ""
+
+#: ../en/docs/site-structure.md:40
+msgid "Qgoda [templates]([% q.llink(name = 'templates') %]) are called \"views\".  And as you may have guessed already, this directory contains the templates used for the site."
+msgstr ""
+
+#: ../en/docs/site-structure.md:42
+msgid "### `_views/default.html`"
+msgstr ""
+
+#: ../en/docs/site-structure.md:44
+msgid "This is the only special file in the directory `_views`."
+msgstr ""
+
+#: ../en/docs/site-structure.md:46
+msgid "The view template to use for a certain document is determined by the variable `view` which defaults to the value `default.html`.  Therefore, unless specified otherwise, this file should contain the default template for your site."
+msgstr ""
+
+#: ../en/docs/site-structure.md:48
+msgid "### `_views/**`"
+msgstr ""
+
+#: ../en/docs/site-structure.md:50
+msgid "Normally, you will modularize your view templates into snippets or compoents."
+msgstr ""
+
+#: ../en/docs/site-structure.md:52
+msgid "### `docs/`"
+msgstr ""
+
+#: ../en/docs/site-structure.md:54
+msgid "The directory `docs` contains the documentation that you are currently reading.  You can safely delete the entire directory."
+msgstr ""
+
+#: ../en/docs/site-structure.md:56
+msgid "## Other Files and Directories"
+msgstr ""
+
+#: ../en/docs/site-structure.md:58
+msgid "All other files and directories contain content and are copied to the `_site` directory, possibly after running them through a processor chain."
+msgstr ""
+
+#: ../en/docs/tags.md:2
+msgctxt "title"
+msgid "Tags"
+msgstr ""
+
+#: ../en/docs/tags.md:5
+msgctxt "tags.0"
+msgid "Tags"
+msgstr ""
+
+#: ../en/docs/tags.md:7
+msgid ""
+"[% USE q = Qgoda %]\n"
+"[% TAGS [@ @] %]\n"
+"Tags are covered in great detail on the [Qgoda website](http://www.qgoda.net/en/docs/tags/), so you should look there for starters."
+msgstr ""
+
+#: ../en/docs/tags.md:11
+msgid "Even without reading the detailed documentation, the source code of [`_views/components/taglist.html`](https://github.com/gflohr/qgoda-essential/blob/master/_views/components/taglist..html) should be pretty self-explanatory.  In case you haven't guessed so already: It generates the list of tags in the right column of this page."
+msgstr ""
+
+#: ../en/docs/tags.md:13
+msgid "The tricky part is again the generation of an unknown, arbitrary number of tag pages.  And again, it's the [cloning feature](http://www.qgoda.net/en/docs/cloning/) that comes to our rescue.  This is the source code of `en/tags/index.md`:"
+msgstr ""
+
+# QGODA-NO-XGETTEXT
+#: ../en/docs/tags.md:15
+msgid ""
+"```yaml\n"
+"---\n"
+"virtual: 1\n"
+"type: page\n"
+"---\n"
+"[% USE q = Qgoda %]"
+msgstr ""
+
+#: ../en/docs/tags.md:23
+msgid ""
+"[% IF !asset.parent %]\n"
+"    [% FOREACH tag IN q.taxonomyValues('tags') %]\n"
+"      [% location = q.sprintf(\"/%s/tags/%s/index.html\", \n"
+"                              asset.lingua,\n"
+"                              tag.slugify(asset.lingua)) %]\n"
+"      [% q.clone(location => location\n"
+"                 plocation => location\n"
+"                 title => '#' _ tag\n"
+"                 tag => tag\n"
+"                 start => 0) %]\n"
+"    [% END %]\n"
+"[% ELSE %]\n"
+"  [% filters = { tags = ['icontains', tag] } %]\n"
+"  [% INCLUDE components/listing.html filters = filters %]\n"
+"[% END %]\n"
+"```\n"
+"<!--QGODA-NO-XGETTEXT-->"
+msgstr ""
+
+#: ../en/docs/tags.md:41
+msgid "It bears an amazing similarity with the code for [archives]([@ q.llink(name = 'archives') @]).  The only noteworthy thing is the function `q.taxonomyValues()` which gives you the complete set of values for a certain taxonomy, in this case the taxonomy `tags`."
+msgstr ""
+
+#: ../en/docs/tags.md:43
+msgid "You can further restrict that by extracting only values from documents that have the same language and are of type posts (as an example):"
+msgstr ""
+
+#: ../en/docs/tags.md:45
+msgid ""
+"```tt2\n"
+"[% tags = q.taxonomyValues('tags' type = 'post' lingua = asset.lingua )]\n"
+"```"
+msgstr ""
+
+#: ../en/docs/tags.md:49
+msgid "Now move on to [@ q.lanchor(name = 'related') @] for learning how to list related documents."
+msgstr ""
+
+#: ../en/docs/template-setup.md:2
+msgctxt "title"
+msgid "Template Setup"
+msgstr ""
+
+#: ../en/docs/template-setup.md:5
+msgctxt "tags.3"
+msgid "JavaScript"
+msgstr ""
+
+#: ../en/docs/template-setup.md:5
+msgctxt "tags.0"
+msgid "Templates"
+msgstr ""
+
+#: ../en/docs/template-setup.md:5
+msgctxt "tags.2"
+msgid "CSS"
+msgstr ""
+
+#: ../en/docs/template-setup.md:5
+msgctxt "tags.1"
+msgid "Cache-Busting"
+msgstr ""
+
+#: ../en/docs/template-setup.md:7
+msgid ""
+"[% USE q = Qgoda %]\n"
+"[% TAGS [@ @] %]\n"
+"Setting up some global logic that is available in all modules of the templates is usually a good idea.  You should always do that from the root of your template tree and use the `PROCESS` directive of the [Template Toolkit](http://www.http://www.template-toolkit.org/), and *not* `INCLUDE` for that."
+msgstr ""
+
+#: ../en/docs/template-setup.md:13
+msgid "## Default Template"
+msgstr ""
+
+#: ../en/docs/template-setup.md:15
+msgid "The first line of the [default template]([@ q.llink(name = 'templates') @]) looked like this:"
+msgstr ""
+
+#: ../en/docs/template-setup.md:17
+msgid ""
+"```tt2\n"
+"[%- PROCESS functions/setup.tt -%]\n"
+"...\n"
+"```"
+msgstr ""
+
+#: ../en/docs/template-setup.md:22
+msgid "Also note, that the directive uses `[%- ... -%]`, so that possible white space is removed.  Otherwise, you may end up with whitespace before the `DOCTYPE` declaration!"
+msgstr ""
+
+#: ../en/docs/template-setup.md:24
+msgid "In contrast to the `INCLUDE` directive, `PROCESS` includes the file with a context switch.  All variables manipulated inside the include will have the same value in the calling template."
+msgstr ""
+
+#: ../en/docs/template-setup.md:26
+msgid "The setup template that ships with this theme is really simple:"
+msgstr ""
+
+#: ../en/docs/template-setup.md:28
+msgid ""
+"```tt2\n"
+"[%- global = config.global -%]\n"
+"```"
+msgstr ""
+
+#: ../en/docs/template-setup.md:32
+msgid "It just copies the content of `config.global` from the [configuration]([@ q.llink(name = 'configuration') @]) file `_config.yaml` into a variable `global`."
+msgstr ""
+
+#: ../en/docs/template-setup.md:34
+msgid "The section from `_config.yaml` contains the following:"
+msgstr ""
+
+#: ../en/docs/template-setup.md:36
+msgid ""
+"```yaml\n"
+"global:\n"
+"  scripts:\n"
+"    - /assets/js/site.js\n"
+"  styles:\n"
+"    - /assets/css/styles.css\n"
+"```"
+msgstr ""
+
+#: ../en/docs/template-setup.md:44
+msgid "After that assignment, the variable `global` contains to arrays `scripts` and `styles` that are initialized with the main JavaScript file and the main Stylesheet for the site."
+msgstr ""
+
+#: ../en/docs/template-setup.md:46
+msgid "It is crucial that these arrays are not top-level variables but children of a top-level variable.  See http://www.template-toolkit.org/docs/manual/Directives.html#section_INCLUDE for an explanation (scroll down to \"Technical Note\").  Otherwise, changes made to it will be invisible."
+msgstr ""
+
+#: ../en/docs/template-setup.md:48
+msgid "## Adding Styles"
+msgstr ""
+
+#: ../en/docs/template-setup.md:50
+msgid "In [@ q.lanchor(name = 'templates') @] we have already learned that it is wise to calculate the contents of the HTML `<body>` before that of the HTML `<head>`.  That pays out now.   You can do any of the following in your body view templates:"
+msgstr ""
+
+#: ../en/docs/template-setup.md:52
+msgid ""
+"```tt2\n"
+"[% global.styles.push('/assets/css/carousel.css') %]\n"
+"```"
+msgstr ""
+
+#: ../en/docs/template-setup.md:56 ../en/docs/template-setup.md:83
+msgid "Or even:"
+msgstr ""
+
+#: ../en/docs/template-setup.md:58
+msgid ""
+"```tt2\n"
+"[% global.styles.push('<style>.important { font-weight: bold; }</style>') %]\n"
+"```"
+msgstr ""
+
+#: ../en/docs/template-setup.md:62
+msgid "You can, of course, also override the styles completely by assigning a new array to `global.styles`."
+msgstr ""
+
+#: ../en/docs/template-setup.md:64
+msgid "Now look into `_views/partials/head.html`:"
+msgstr ""
+
+#: ../en/docs/template-setup.md:66
+msgid ""
+"```tt2\n"
+"  <head>\n"
+"    ...\n"
+"    [% INCLUDE functions/scripts.tt %]\n"
+"  </head>\n"
+"```"
+msgstr ""
+
+#: ../en/docs/template-setup.md:73
+msgid "The template code [`functions/styles.tt`](https://github.com/gflohr/qgoda-essential/blob/master/_views/functions/styles.tt) that spits out the styles takes care that all stylesheets are included in the correct order.  It also filters out possible duplicates."
+msgstr ""
+
+#: ../en/docs/template-setup.md:75
+msgid "## Adding JavaScript"
+msgstr ""
+
+#: ../en/docs/template-setup.md:77
+msgid "This works in a very similar fashion to stylesheets:"
+msgstr ""
+
+#: ../en/docs/template-setup.md:79
+msgid ""
+"```tt2\n"
+"[% global.scripts.push('/assets/js/carousel.js') %]\n"
+"```"
+msgstr ""
+
+#: ../en/docs/template-setup.md:85
+msgid ""
+"```tt2\n"
+"[% global.scripts.push('<script>const answer = 42;</script>') %]\n"
+"```"
+msgstr ""
+
+#: ../en/docs/template-setup.md:89
+msgid "In `_views/partials/body.html`, all JavaScript codes is included just before the closing body tag:"
+msgstr ""
+
+#: ../en/docs/template-setup.md:91
+msgid ""
+"```tt2\n"
+"  <body>\n"
+"    ...\n"
+"    [% INCLUDE functions/scripts.tt %]\n"
+"  </body>\n"
+"```"
+msgstr ""
+
+#: ../en/docs/template-setup.md:98
+msgid "Just like the template code for styles, the code for scripts in [`functions/scripts.tt`](https://github.com/gflohr/qgoda-essential/blob/master/_views/functions/scripts.tt) orders correctly and filters out duplicates."
+msgstr ""
+
+#: ../en/docs/template-setup.md:100
+msgid "Be aware though, that this mechanism does by no means replace a full-fledged module bundler like [browserify](http://browserify.org/) or [webpack](https://webpack.js.org/).  You are responsible yourself to include all scripts - inline and external - in the right order!"
+msgstr ""
+
+#: ../en/docs/template-setup.md:102
+msgid "## Adding CSS and JavaScript From Inside Markdown"
+msgstr ""
+
+#: ../en/docs/template-setup.md:104
+msgid "There is one gotcha! The view templates are used in the second pass of the content processing, when the output of the Markdown process is wrapped.  Consequently, there is no variable `global` while processing Markdown, and to make things worse, Template Toolkit does not even warn you about that."
+msgstr ""
+
+#: ../en/docs/template-setup.md:106
+msgid "There is a simple solution though.  Change `_views/functions/setup.tt` to read like this:"
+msgstr ""
+
+#: ../en/docs/template-setup.md:108
+msgid ""
+"```tt2\n"
+"[%- global = config.global -%]\n"
+"[%- IF asset.scripts %][% global.scripts.push(assets.scripts) %][% END -%]\n"
+"[%- IF asset.styles %][% global.scripts.styles(assets.styles) %][% END -%]\n"
+"```"
+msgstr ""
+
+#: ../en/docs/template-setup.md:114
+msgid "Now you can do the following in your Markdown documents:"
+msgstr ""
+
+#: ../en/docs/template-setup.md:116
+msgid ""
+"```tt2\n"
+"---\n"
+"...\n"
+"scripts: /assets/js/carousel.js\n"
+"---\n"
+"... Markdown following ...\n"
+"[% asset.scripts.push('/assets/js/counter.js') %]\n"
+"```"
+msgstr ""
+
+#: ../en/docs/template-setup.md:125
+msgid "Now, when the HTML wrapper is rendered, the scripts are added to the global variables.  Adding CSS is done in the same way."
+msgstr ""
+
+#: ../en/docs/template-setup.md:127
+msgid "## Cache Busting"
+msgstr ""
+
+#: ../en/docs/template-setup.md:129
+msgid "You may have noticed that the code that renders the links to the JavaScript and CSS files into the page, add a question mark followed by some decimal number to the links:"
+msgstr ""
+
+#: ../en/docs/template-setup.md:131
+msgid ""
+"```html\n"
+"<script src=\"/assets/js/site.js?1522333201\" type=\"text/javascript\"></script>\n"
+"```"
+msgstr ""
+
+#: ../en/docs/template-setup.md:135
+msgid "The number after the question mark is the unix timestamp of the file in question.  The parameter is completely ignored by the web server when serving the file but browsers will use it, when deciding whether to request the file again, or use a version from the cache.  This technique is known as *cache busting*."
+msgstr ""
+
+#: ../en/docs/template-setup.md:137
+msgid "You can use the same function anywhere yourself:"
+msgstr ""
+
+#: ../en/docs/template-setup.md:139
+msgid ""
+"```tt2\n"
+"[% USE q = Qgoda %]\n"
+"<img src=\"[% q.bust_cache('/assets/images/clock.svg') %]\"\n"
+"     alt=\"An analog clock\">\n"
+"```"
+msgstr ""
+
+#: ../en/docs/template-setup.md:145
+msgid "You can move on to [@ q.lanchor(name = 'listings') @] from here!"
+msgstr ""
+
+#: ../en/docs/templates.md:2
+msgctxt "title"
+msgid "Templates"
+msgstr ""
+
+#: ../en/docs/templates.md:7
+msgid "[% USE q = Qgoda %]\n"
+"Qgoda templates are called \"views\" and are by default searched in the directory `_views`. Qgoda uses the [Template Toolkit](http://www.http://www.template-toolkit.org/) as its styling template engine."
+msgstr ""
+
+#: ../en/docs/templates.md:10
+msgid "[% TAGS [@ @] %]\n"
+"<qgoda-toc/>"
+msgstr ""
+
+#: ../en/docs/templates.md:13
+msgid "## Overall Structure"
+msgstr ""
+
+#: ../en/docs/templates.md:15
+msgid "The default template `_views/default.html` looks pretty simple at first glance, but pretty weird at second:"
+msgstr ""
+
+#: ../en/docs/templates.md:17
+msgid ""
+"```tt2\n"
+"[%- PROCESS functions/setup.tt -%]\n"
+"[%- body = PROCESS partials/body.html %]\n"
+"[%- head = PROCESS partials/head.html %]\n"
+"[%- WRAPPER wrappers/html5.html %]\n"
+"[%- head %]\n"
+"[% body %]\n"
+"[% END %]\n"
+"```"
+msgstr ""
+
+#: ../en/docs/templates.md:27
+msgid "## Rendering Order"
+msgstr ""
+
+#: ../en/docs/templates.md:29
+msgid "It mostly includes code for the html body and for the html head and does some more fancy stuff.  Wait! First the body, then the head???"
+msgstr ""
+
+#: ../en/docs/templates.md:31
+msgid "Yes, and that makes perfect sense!  Think about the best-known HTML element from the `<head>`, the `<title>` tag.  Normally, there is no way to fill the document title, while rendering the body because the head has already been rendered."
+msgstr ""
+
+#: ../en/docs/templates.md:33
+msgid "Or imagine that rendering a specific part of the body requires adding CSS files or snippets to the head."
+msgstr ""
+
+#: ../en/docs/templates.md:35
+msgid "You can avoid all these problems by first taking care of the body before you do the head:"
+msgstr ""
+
+#: ../en/docs/templates.md:37
+msgid ""
+"```tt2\n"
+"[%- body = PROCESS partials/body.html %]\n"
+"[%- head = PROCESS partials/head.html %]\n"
+"```"
+msgstr ""
+
+#: ../en/docs/templates.md:42
+msgid "But you do not render them into a page but into memory, into the variables `body` and `head`.  All that is left to do, is to spit them out in the opposite order:"
+msgstr ""
+
+#: ../en/docs/templates.md:44
+msgid ""
+"```tt2\n"
+"[%- head %]\n"
+"[% body %]\n"
+"```"
+msgstr ""
+
+#: ../en/docs/templates.md:49
+msgid "Problem solved!"
+msgstr ""
+
+#: ../en/docs/templates.md:51
+msgid "## Doctype Wrappers"
+msgstr ""
+
+#: ../en/docs/templates.md:53
+msgid "The rendering of the head and body as described above is actually a little bit more:"
+msgstr ""
+
+#: ../en/docs/templates.md:55
+msgid ""
+"```tt2\n"
+"[%- WRAPPER wrappers/html5.html %]\n"
+"[%- head %]\n"
+"[% body %]\n"
+"[% END %]\n"
+"```"
+msgstr ""
+
+#: ../en/docs/templates.md:62
+msgid "Wrappers are an extremely useful feature of the [Template Toolkit](http://www.template-toolkit.org/).  The wrapper file `_views/wrappers/html5.html` looks like this:"
+msgstr ""
+
+#: ../en/docs/templates.md:64
+msgid ""
+"```tt2\n"
+"<!doctype html>\n"
+"<html lang=\"[% IF asset.lingua; asset.lingua; END %]\" class=\"no-js\">\n"
+"[%- content %]\n"
+"</html>\n"
+"```"
+msgstr ""
+
+#: ../en/docs/templates.md:71
+msgid "The variable `content` contains whatever you had put between `[% WRAPPER %]` and `[% END %]` before.  Like this, it is very easy for you to change the document type to XHTML, HTML4 or even to quirks mode by simply writing another wrapper."
+msgstr ""
+
+#: ../en/docs/templates.md:73
+msgid "## Template Setup"
+msgstr ""
+
+#: ../en/docs/templates.md:75
+msgid "The first line includes the file `functions/setup.tt` that is used for executing Template Toolkit code that should affect all modules of the template:"
+msgstr ""
+
+#: ../en/docs/templates.md:77
+msgid ""
+"```markup\n"
+"[%- PROCESS functions/setup.tt -%]\n"
+"```"
+msgstr ""
+
+#: ../en/docs/templates.md:81
+msgid "See [% q.lanchor(name = 'template-setup') %] for more information on what happens there."
+msgstr ""
+
+#: ../en/docs/templates.md:83
+msgid "## Multiple Templates"
+msgstr ""
+
+#: ../en/docs/templates.md:85
+msgid "The default template that ships with this theme is so unspecific that you will find very little reason to write more templates, even if some parts of your site sport a completely different layout.  Instead you have to possibilities:"
+msgstr ""
+
+#: ../en/docs/templates.md:87
+msgid "### Conditional Inclusion"
+msgstr ""
+
+#: ../en/docs/templates.md:89
+msgid "You can include different modules based on document variables:"
+msgstr ""
+
+#: ../en/docs/templates.md:91
+msgid ""
+"```markup\n"
+"[% IF asset.type == 'start-page' %]\n"
+"  [% INCLUDE partials/body/banner.html %]\n"
+"[% ELSE %]\n"
+"  [% INCLUDE partials/body/tag-cloud.html %]\n"
+"[% END %]\n"
+"```"
+msgstr ""
+
+#: ../en/docs/templates.md:99
+msgid "### Dynamic Inclusion"
+msgstr ""
+
+#: ../en/docs/templates.md:101
+msgid "The other possibility is to use a variable.  Say, you have a markdown document like this:"
+msgstr ""
+
+#: ../en/docs/templates.md:103
+msgid ""
+"```yaml\n"
+"---\n"
+"title: The Holy Grail\n"
+"aside: partials/body/aside/google_ads.html\n"
+"---\n"
+"The Holy Grail is the ...\n"
+"```"
+msgstr ""
+
+#: ../en/docs/templates.md:111
+msgid "You can then write something like this in your view template:"
+msgstr ""
+
+#: ../en/docs/templates.md:113
+msgid ""
+"```tt2\n"
+"<article>[% content %]</article>\n"
+"[% aside = asset.aside %]\n"
+"<aside>[% INCLUDE $aside %]</aside>\n"
+"```"
+msgstr ""
+
+#: ../en/docs/templates.md:119
+msgid "You may have noticed a little gotcha in line 2: You have to copy the document variable `asset.aside` into a top-level variable `aside` because the interpolation with `$dollar` variables only works for top-level variables in the Template Toolkit."
+msgstr ""
+
+#: ../en/docs/templates.md:121
+msgid "You can continue with [@ q.lanchor(name = 'template-setup') @] from here."
+msgstr ""
+
+#: ../en/tags.md:
+msgctxt "title"
+msgid "tags"
+msgstr ""
+
+#: ../en/tags.md:5
+msgid "[% USE q = Qgoda %]"
+msgstr ""
+
+#: ../en/tags.md:7
+msgid ""
+"[% IF !asset.parent %]\n"
+"    [% FOREACH tag IN q.taxonomyValues('tags') %]\n"
+"      [% location = q.sprintf(\"/%s/tags/%s/index.html\", \n"
+"                              asset.lingua,\n"
+"                              tag.slugify(asset.lingua)) %]\n"
+"      [% q.clone(location => location\n"
+"                 plocation => location\n"
+"                 title => '#' _ tag\n"
+"                 tag => tag\n"
+"                 start => 0) %]\n"
+"    [% END %]\n"
+"[% ELSE %]\n"
+"  [% filters = { tags = ['icontains', tag] } %]\n"
+"  [% INCLUDE components/listing.html filters = filters %]\n"
+"[% END %]"
 msgstr ""
 
