@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: qgoda-multilang 0.0.1\n"
 "Report-Msgid-Bugs-To: 'Guido Flohr <guido.flohr@cantanea.com>'\n"
-"PO-Revision-Date: 2018-03-30 17:33+0300\n"
+"PO-Revision-Date: 2018-03-30 18:01+0300\n"
 "Last-Translator: Guido Flohr <guido@guido.cantanea.com>\n"
 "Language-Team: German\n"
 "Language: de\n"
@@ -121,3 +121,18 @@ msgstr "Startseite"
 #: ../_views/partials/body/header.html:13
 msgid "About"
 msgstr "Info"
+
+#: ../de/index.md:
+msgctxt "subtitle"
+msgid ""
+msgstr ""
+
+#: ../de/index.md:
+msgctxt "title"
+msgid ""
+msgstr ""
+
+#: ../de/index.md:
+msgctxt "tags"
+msgid ""
+msgstr ""

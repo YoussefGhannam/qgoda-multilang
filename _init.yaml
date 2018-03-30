@@ -110,6 +110,10 @@ defaults:
       lingua: en-us
       organization: cantanea EOOD
       type: post
+      translate:
+        - title
+        - subtitle
+        - tags
   - files:
       - index.md
       - index-*.md

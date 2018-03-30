@@ -15,3 +15,18 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit"
 
+#: ../de/index.md:
+msgctxt "subtitle"
+msgid ""
+msgstr ""
+
+#: ../de/index.md:
+msgctxt "title"
+msgid ""
+msgstr ""
+
+#: ../de/index.md:
+msgctxt "tags"
+msgid ""
+msgstr ""
+

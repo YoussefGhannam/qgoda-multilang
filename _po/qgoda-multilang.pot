@@ -115,3 +115,18 @@ msgstr ""
 msgid "About"
 msgstr ""
 
+#: ../de/index.md:
+msgctxt "subtitle"
+msgid ""
+msgstr ""
+
+#: ../de/index.md:
+msgctxt "title"
+msgid ""
+msgstr ""
+
+#: ../de/index.md:
+msgctxt "tags"
+msgid ""
+msgstr ""
+
