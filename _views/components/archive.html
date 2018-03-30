@@ -14,7 +14,7 @@
               gtx.gettext('December')] %]
 <h4>[% gtx.gettext('Archive') %]</h4>
 <ol class="list-unstyled">
-[% FOREACH year IN q.listPosts().vmap('date.year').unique().nsort().reverse() %]
+[% FOREACH year IN q.llistPosts().vmap('date.year').unique().nsort().reverse() %]
     [% FOREACH month IN q.llistPosts('date.year' = year).vmap('date.month').unique().sort().reverse() %]
       [% month0 = month - 1 %]
   <li><a href="/archive/[% year %]/[% month %]/">[% months.$month0 %] [% year %]</a></li>

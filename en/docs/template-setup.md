@@ -12,7 +12,7 @@ Setting up some global logic that is available in all modules of the templates i
 
 ## Default Template
 
-The first line of the [default template]([@ q.link(name = 'templates') @]) looked like this:
+The first line of the [default template]([@ q.llink(name = 'templates') @]) looked like this:
 
 ```tt2
 [%- PROCESS functions/setup.tt -%]
@@ -29,7 +29,7 @@ The setup template that ships with this theme is really simple:
 [%- global = config.global -%]
 ```
 
-It just copies the content of `config.global` from the [configuration]([@ q.link(name = 'configuration') @]) file `_config.yaml` into a variable `global`.
+It just copies the content of `config.global` from the [configuration]([@ q.llink(name = 'configuration') @]) file `_config.yaml` into a variable `global`.
 
 The section from `_config.yaml` contains the following:
 
@@ -47,7 +47,7 @@ It is crucial that these arrays are not top-level variables but children of a to
 
 ## Adding Styles
 
-In [@ q.anchor(name = 'templates') @] we have already learned that it is wise to calculate the contents of the HTML `<body>` before that of the HTML `<head>`.  That pays out now.   You can do any of the following in your body view templates:
+In [@ q.lanchor(name = 'templates') @] we have already learned that it is wise to calculate the contents of the HTML `<body>` before that of the HTML `<head>`.  That pays out now.   You can do any of the following in your body view templates:
 
 ```tt2
 [% global.styles.push('/assets/css/carousel.css') %]
@@ -142,4 +142,4 @@ You can use the same function anywhere yourself:
      alt="An analog clock">
 ```
 
-You can move on to [@ q.anchor(name = 'listings') @] from here!
+You can move on to [@ q.lanchor(name = 'listings') @] from here!

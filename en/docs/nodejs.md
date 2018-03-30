@@ -22,7 +22,7 @@ The first step should be editing `package.json`.  It currently contains only one
 
 Note that Browsersync is instructed to only watch the file `_timestamp` for changes and reload pages in the connected browsers.  The file `_timestamp` will be updated by Qgoda only, after a site has been completely rebuilt.  Letting the web server only watch that timestamp file avoids annoying rebuild loops of the tools involved.
 
-Running `yarn start` or `npm start` in another terminal window will now fire up webpack and let you bundle all your assets.  But it is easier to let Qgoda run this automatically.  Change [`_config.yaml`]([% q.link(name = 'configuration') %]) and add a second helper:
+Running `yarn start` or `npm start` in another terminal window will now fire up webpack and let you bundle all your assets.  But it is easier to let Qgoda run this automatically.  Change [`_config.yaml`]([% q.llink(name = 'configuration') %]) and add a second helper:
 
 ```yaml
 helpers:

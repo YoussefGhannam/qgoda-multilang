@@ -6,11 +6,11 @@
           <nav class="nav">
             <a class="nav-link[% IF (asset.name == 'home') 
                                   || asset.type == 'post' %] active[% END %]" 
-               href="[% q.link(name => 'home') %]">
+               href="[% q.llink(name => 'home') %]">
               [% gtx.gettext('Home') %]
             </a>
             <a class="nav-link[% IF asset.name == 'about' %] active[% END %]"
-               href="[% q.link(name = 'about') %]">[% gtx.gettext('About') %]</a>
+               href="[% q.llink(name = 'about') %]">[% gtx.gettext('About') %]</a>
           </nav>
         </div>
       </div>

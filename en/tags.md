@@ -6,7 +6,9 @@ type: page
 
 [% IF !asset.parent %]
     [% FOREACH tag IN q.taxonomyValues('tags') %]
-      [% location = q.sprintf("/tags/%s/index.html", tag.slugify) %]
+      [% location = q.sprintf("/%s/tags/%s/index.html", 
+                              asset.lingua,
+                              tag.slugify(asset.lingua)) %]
       [% q.clone(location => location
                  plocation => location
                  title => '#' _ tag

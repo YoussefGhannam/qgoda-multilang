@@ -5,7 +5,7 @@ date: 2018-03-20
 tags: [ General, Configuration ]
 ---
 [% USE q = Qgoda %]
-Qgoda's main configuration file is `_config.yaml`.  Note that you currently have to [restart Qgoda]([% q.linkPost(name = 'starting-qgoda') %]) in order to take changes to the configuration into effect.
+Qgoda's main configuration file is `_config.yaml`.  Note that you currently have to [restart Qgoda]([% q.llinkPost(name = 'starting-qgoda') %]) in order to take changes to the configuration into effect.
 
 The source of the configuration comes from the theme file [`_init.yaml`](https://github.com/gflohr/qgoda-essential/blob/master/_init.yaml) that does not get installed with the theme.  Instead, it is used for initializing `_config.yaml` or gets merged into an already existing `_config.yaml`.
 
@@ -44,13 +44,13 @@ The variable `lingua` is universally used in Qgoda for holding a standard HTTP l
 [@ TAGS [% %] @]
 It also simplifies a future migration to a multi-language site, and you never know, do you?
 
-The next rule for `index.md` and `index-*.md` overrides the value `type` for these documents, and also sets the rendering priority for these documents.  See [% q.anchor(name = 'listings') %] for an explanation of the variable `priority`.
+The next rule for `index.md` and `index-*.md` overrides the value `type` for these documents, and also sets the rendering priority for these documents.  See [% q.lanchor(name = 'listings') %] for an explanation of the variable `priority`.
 
 You can find a detailed explanation for setting document defaults in `_config.yaml` at http://www.qgoda.net/en/docs/defaults.html.
 
 ## Markdown Processor Chain
 
-As described in [[% q.xref('title', name = 'installation') %]]([% q.linkPost(name = 'installation') %]#hoedown), it is preferable to use the Hoedown markdown processor instead of the regular one.  This is achieved by re-configuring the processor chain for markdown files:
+As described in [[% q.lxref('title', name = 'installation') %]]([% q.llinkPost(name = 'installation') %]#hoedown), it is preferable to use the Hoedown markdown processor instead of the regular one.  This is achieved by re-configuring the processor chain for markdown files:
 
 ```yaml
 processors:
@@ -84,7 +84,7 @@ helpers:
   webpack: npm start
   browser-sync: npm run server
 ```
-See [% q.anchor(name = 'nodejs') %] for more information.
+See [% q.lanchor(name = 'nodejs') %] for more information.
 
 ## Template Globals
 
@@ -98,7 +98,7 @@ global:
     - /assets/css/styles.css
 ```
 
-Please refer to [% q.anchor(name = 'template-setup') %] for more information.
+Please refer to [% q.lanchor(name = 'template-setup') %] for more information.
 
 ## Other Configuration Variables
 

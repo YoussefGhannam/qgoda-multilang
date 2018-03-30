@@ -5,12 +5,15 @@ virtual: 1
 [% USE q = Qgoda %]
 
 [% IF !asset.parent %]
-  [% FOREACH year IN q.listPosts().vmap('date.year').unique() %]
-    [% FOREACH imonth IN q.listPosts('date.year' = year).vmap('date.imonth').unique() %]
-      [% location = q.sprintf("/archive/%04u/%02u/index.html", year, imonth) %]
+  [% FOREACH year IN q.llistPosts().vmap('date.year').unique() %]
+    [% FOREACH imonth IN q.llistPosts('date.year' = year).vmap('date.imonth').unique() %]
+      [% location = q.sprintf("/%s/archive/%04u/%02u/index.html", 
+                              asset.lingua, year, imonth) %]
       [% q.clone(location => location
                  plocation => location
-                 title => q.sprintf("Posts from %04u/%02u", year, imonth) 
+                 title => q.sprintf(gtx.xgettext("Posts from {date}",
+                                                 gtx.gettext("%04u/%02u"),
+                                                 year, imonth)), 
                  year => year imonth => imonth
                  start => 0) %]
     [% END %]

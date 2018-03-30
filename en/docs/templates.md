@@ -78,7 +78,7 @@ The first line includes the file `functions/setup.tt` that is used for executing
 [%- PROCESS functions/setup.tt -%]
 ```
 
-See [% q.anchor(name = 'template-setup') %] for more information on what happens there.
+See [% q.lanchor(name = 'template-setup') %] for more information on what happens there.
 
 ## Multiple Templates
 
@@ -118,4 +118,4 @@ You can then write something like this in your view template:
 
 You may have noticed a little gotcha in line 2: You have to copy the document variable `asset.aside` into a top-level variable `aside` because the interpolation with `$dollar` variables only works for top-level variables in the Template Toolkit.
 
-You can continue with [@ q.anchor(name = 'template-setup') @] from here.
+You can continue with [@ q.lanchor(name = 'template-setup') @] from here.

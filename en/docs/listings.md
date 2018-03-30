@@ -39,10 +39,10 @@ And the invocation of `listPosts` is actually a synonym for this:
 When you look into the source code of [`_views/components/listing.html`](https://github.com/gflohr/qgoda-essential/blob/master/_views/components/listing.html) you will probably find that this is not for the faint of heart.  It looks like it would be a good idea to parametrize the listing so that it can be reused for different types of listings.  This is easy:
 
 ```tt2
-[% posts = q.listPosts(filters).nsortBy('date').reverse() %]
+[% posts = q.llistPosts(filters).nsortBy('date').reverse() %]
 ```
 
-Now the variable `filters` can contain arbitrary filters.  If you `INCLUDE` the component without filters, the default will be used, that lists *all* posts like show on the [start page]([% q.link(name = 'home') %]).
+Now the variable `filters` can contain arbitrary filters.  If you `INCLUDE` the component without filters, the default will be used, that lists *all* posts like show on the [start page]([% q.llink(name = 'home') %]).
 
 But you can also search for all posts from June 2015 like this:
 
@@ -100,4 +100,4 @@ blab
 
 The form `[%- ... -%]` will eat up all adjacent whitespace and fix the problem.
 
-You can continue with [@ q.anchor(name = 'archives') @] from here.
+You can continue with [@ q.lanchor(name = 'archives') @] from here.

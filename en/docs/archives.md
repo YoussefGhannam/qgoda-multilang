@@ -19,8 +19,8 @@ virtual: 1
 [% USE q = Qgoda %]
 
 [% IF !asset.parent %]
-  [% FOREACH year IN q.listPosts().vmap('date.year').unique() %]
-    [% FOREACH imonth IN q.listPosts('date.year' = year).vmap('date.imonth').unique() %]
+  [% FOREACH year IN q.llistPosts().vmap('date.year').unique() %]
+    [% FOREACH imonth IN q.llistPosts('date.year' = year).vmap('date.imonth').unique() %]
       [% location = q.sprintf("/archive/%04u/%02u/index.html", year, imonth) %]
       [% q.clone(location => location
                  plocation => location
@@ -45,4 +45,4 @@ Iff the document has a parent, it is the product of a call to `q.clone()` above,
 
 Note that each clone will have `start` reset to 0 so that the pagination restarts at the beginning.
 
-Now move on to [@ q.anchor(name = 'tags') @] for learning how to deal with tags (or categories or whatever other taxonomy you like).
+Now move on to [@ q.lanchor(name = 'tags') @] for learning how to deal with tags (or categories or whatever other taxonomy you like).

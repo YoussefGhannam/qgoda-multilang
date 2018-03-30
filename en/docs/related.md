@@ -12,11 +12,12 @@ See `_views/components/related.html`:
 
 ```tt2
 [% USE q = Qgoda %]
+[% USE gtx = Gettext(config.po.textdomain, asset.lingua) %]
 [% IF !threshold %][% threshold = 3 %][% END %]
 [% IF !count %][% count = 5 %][% END %]
-[% docs = q.related(threshold, type = 'post').splice(0, count - 1) %]
+[% docs = q.lrelated(threshold, type = 'post').splice(0, count - 1) %]
 [% IF docs.size %]
-  <h2 class="related-h">Related</h2>
+  <h2 class="related-h">[% gtx.gettext('Related') %]</h2>
   <ul class="related-list">
     [% FOREACH doc IN docs %]
     <li><a href="[% doc.permalink %]">[% doc.title | html %]</a></li>
@@ -25,14 +26,14 @@ See `_views/components/related.html`:
 [% END %]
 ```
 
-The heart of it all is the call to `q.related()`:
+The heart of it all is the call to `q.lrelated()`:
 
 ```tt2
-[% docs = q.related(threshold, type = 'post').splice(0, count - 1) %]
+[% docs = q.lrelated(threshold, type = 'post').splice(0, count - 1) %]
 ```
 
 The first argument is the threshhold for the relationship value.  That avoids that random documents are displayed, when nothing related can be found.
 
 Following the threshold is the now well known list of additional filters.  The resulting list can then be cut to a maximum size (variable `count`).  The rest should be self-explanatory.
 
-Now that all relevant features of this theme are covered, you may want to move on to [@ q.anchor(name = 'nodejs') @] if you want to learn how to add modern web development features to the theme.
+Now that all relevant features of this theme are covered, you may want to move on to [@ q.lanchor(name = 'nodejs') @] if you want to learn how to add modern web development features to the theme.
