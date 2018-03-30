@@ -86,6 +86,7 @@ exclude_watch:
 helpers:
   webpack: npm start
   'browser-sync': npm run server
+linguas: [en, de]
 po:
   textdomain: qgoda-multilang
   msgid_bugs_address: Guido Flohr <guido.flohr@cantanea.com>

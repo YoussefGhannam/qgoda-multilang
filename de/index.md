@@ -1,0 +1,3 @@
+---
+master: /de/index.md
+---

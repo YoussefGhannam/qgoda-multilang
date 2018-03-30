@@ -1,4 +1,4 @@
-[% USE gtx = Gettext %]
+[% USE gtx = Gettext(config.po.textdomain, asset.lingua) %]
     <footer class="blog-footer">
       <p>[% gtx.gettext('Qgoda example theme based on the blog template built for <a href="https://getbootstrap.com/">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.') %]</p>
       <p>

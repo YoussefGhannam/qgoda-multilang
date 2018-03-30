@@ -1,7 +1,8 @@
 [% USE q = Qgoda %]
-<h4>Tags</h4>
+[% USE gtx = Gettext %]
+<h4>[% gtx.gettext('Tags') %]</h4>
 <p class="[% css.main.taglist %]">
-[% FOREACH tag IN q.taxonomyValues('tags') %]
-<a class="[% css.main.taglist_link %]" href="/tags/[% tag.slugify %]/">#[% tag %]</a>
+[% FOREACH tag IN q.ltaxonomyValues('tags') %]
+<a class="[% css.main.taglist_link %]" href="/tags/[% tag.slugify(asset.lingua)  %]/">#[% tag %]</a>
 [% END %]
 </p>

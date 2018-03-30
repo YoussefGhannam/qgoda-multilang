@@ -1,4 +1,5 @@
 [% USE q = Qgoda %]
+[% USE gtx = Gettext(config.po.teztdomain, asset.lingua) %]
     <header>
       <div class="blog-masthead">
         <div class="container">
@@ -6,10 +7,10 @@
             <a class="nav-link[% IF (asset.name == 'home') 
                                   || asset.type == 'post' %] active[% END %]" 
                href="[% q.link(name => 'home') %]">
-              Home
+              [% gtx.gettext('Home') %]
             </a>
             <a class="nav-link[% IF asset.name == 'about' %] active[% END %]"
-               href="[% q.link(name = 'about') %]">About</a>
+               href="[% q.link(name = 'about') %]">[% gtx.gettext('About') %]</a>
           </nav>
         </div>
       </div>
@@ -21,10 +22,10 @@
           <h3>[% asset.subtitle | html %]</h3>
           [% END %]
           <p class="lead blog-description">
-          [% q.strftime('%B, %d %Y', asset.date) %]
-          by
-          [% asset.author | html %]
-          [% IF asset.organization %]- [% asset.organization | html %][% END %]
+          [% q.strftime(gtx.gettext('%B, %d %Y'), asset.date) %]
+          &emdash;
+          [% asset.author | html -%]
+          [%- IF asset.organization %], [% asset.organization | html %][% END %]
           </p>
         </div>
       </div>

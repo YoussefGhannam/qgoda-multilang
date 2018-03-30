@@ -1,5 +1,6 @@
 [% USE q = Qgoda %]
-[% posts = q.listPosts(filters).nsortBy('date').reverse() %]
+[% USE gtx = Gettext(config.po.textdomain, asset.lingua) %]
+[% posts = q.llistPosts(filters).nsortBy('date').reverse() %]
 [% IF posts.size %]
   [% IF !per_page %][% per_page = 10 %][% END %]
   [% start = asset.start || 0 %]
@@ -11,22 +12,22 @@
   <div class="blog-listing">
     <h2 class="blog-post-title">[% post.title %]</h2>
     <p class="blog-post-meta">
-        [% q.strftime('%B, %d %Y', post.date) %] 
-        by 
-        [% post.author | html %]
-        [% IF post.organization %]- [% post.organization | html %][% END %]
+        [% q.strftime(gtx.gettext('%B, %d %Y'), post.date) %] 
+        &emdash; 
+        [% post.author | html -%]
+        [%- IF post.organization %], [% post.organization | html %][% END %]
     </p>
     <p>[% post.excerpt %]</p>
-    <a class="more-link" href="[% post.permalink %]">more</a>
+    <a class="more-link" href="[% post.permalink %]">[% gtx.gettext('more') %]</a>
   </div>
   [%- END -%]
 
   [%- IF p.total_pages > 1 -%]
   [%- SET page = 0 -%]
-  <div><nav aria-label="Pagination">
+  <div><nav aria-label="[% gtx.gettext('Pagination') %]">
     <ul class="pagination">
       <li class="page-item[% UNLESS p.previous_link %] disabled[% END %]">
-        <a class="page-link" href="[% p.previous_link %]">Newer</a>
+        <a class="page-link" href="[% p.previous_link %]">[% gtx.gettext('Newer') %]</a>
       </li>
 
       [%- FOREACH link IN p.links -%]
@@ -40,7 +41,7 @@
       [%- END -%]
 
       <li class="page-item[% UNLESS p.next_link %] disabled[% END %]">
-        <a class="page-link" href="[% p.next_link %]">Older</a>
+        <a class="page-link" href="[% p.next_link %]">[% gtx.gettext('Older') %]</a>
       </li>
     </ul>
     [%- IF p.next_start -%]
