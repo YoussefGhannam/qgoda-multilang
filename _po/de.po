@@ -1,0 +1,123 @@
+# German translations for qgoda-multilang package.
+# Copyright (C) 2018 'cantanea EOOD <http://www.cantanea.com/>'
+# This file is distributed under the same license as the qgoda-multilang package.
+# Guido Flohr <guido@guido.cantanea.com>, 2018.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: qgoda-multilang 0.0.1\n"
+"Report-Msgid-Bugs-To: 'Guido Flohr <guido.flohr@cantanea.com>'\n"
+"PO-Revision-Date: 2018-03-30 17:33+0300\n"
+"Last-Translator: Guido Flohr <guido@guido.cantanea.com>\n"
+"Language-Team: German\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../_views/components/archive.html:3
+msgid "January"
+msgstr "Januar"
+
+#: ../_views/components/archive.html:3
+msgid "February"
+msgstr "Februar"
+
+#: ../_views/components/archive.html:3
+msgid "March"
+msgstr "März"
+
+#: ../_views/components/archive.html:3
+msgid "April"
+msgstr "April"
+
+#: ../_views/components/archive.html:3
+msgid "May"
+msgstr "Mai"
+
+#: ../_views/components/archive.html:3
+msgid "June"
+msgstr "Juni"
+
+#: ../_views/components/archive.html:3
+msgid "July"
+msgstr "Juli"
+
+#: ../_views/components/archive.html:3
+msgid "August"
+msgstr "August"
+
+#: ../_views/components/archive.html:3
+msgid "September"
+msgstr "September"
+
+#: ../_views/components/archive.html:3
+msgid "October"
+msgstr "Oktober"
+
+#: ../_views/components/archive.html:3
+msgid "November"
+msgstr "November"
+
+#: ../_views/components/archive.html:3
+msgid "December"
+msgstr "Dezember"
+
+#: ../_views/components/archive.html:15
+msgid "Archive"
+msgstr "Archiv"
+
+#: ../_views/components/listing.html:15 ../_views/partials/body/header.html:25
+msgid "%B, %d %Y"
+msgstr "%d. %B %Y"
+
+#: ../_views/components/listing.html:21
+msgid "more"
+msgstr "mehr"
+
+#: ../_views/components/listing.html:27
+msgid "Pagination"
+msgstr "Paginierung"
+
+#: ../_views/components/listing.html:30
+msgid "Newer"
+msgstr "Neuer"
+
+#: ../_views/components/listing.html:44
+msgid "Older"
+msgstr "Älter"
+
+#: ../_views/components/related.html:7
+msgid "See Also"
+msgstr "Siehe auch"
+
+#: ../_views/components/taglist.html:3
+msgid "Tags"
+msgstr "Tags"
+
+#: ../_views/components/toc.html:4
+msgid "Table Of Contents"
+msgstr "Inhaltsverzeichnis"
+
+#: ../_views/partials/body/footer.html:3
+msgid ""
+"Qgoda example theme based on the blog template built for <a href=\"https://"
+"getbootstrap.com/\">Bootstrap</a> by <a href=\"https://twitter.com/mdo"
+"\">@mdo</a>."
+msgstr ""
+"Qgoda-Beispiel-Thema basierend auf dem Blog-Template für <a href=\"https://"
+"getbootstrap.com/\">Bootstrap</a> von <a href=\"https://twitter.com/mdo"
+"\">@mdo</a>."
+
+#: ../_views/partials/body/footer.html:5
+msgid "Back to top"
+msgstr "Zurück zum Anfang"
+
+#: ../_views/partials/body/header.html:10
+msgid "Home"
+msgstr "Startseite"
+
+#: ../_views/partials/body/header.html:13
+msgid "About"
+msgstr "Info"

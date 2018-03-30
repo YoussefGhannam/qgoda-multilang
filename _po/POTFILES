@@ -1,0 +1,15 @@
+../_views/components/archive.html
+../_views/components/listing.html
+../_views/components/related.html
+../_views/components/taglist.html
+../_views/components/toc.html
+../_views/components/toc/level.html
+../_views/default.html
+../_views/partials/body.html
+../_views/partials/body/aside.html
+../_views/partials/body/footer.html
+../_views/partials/body/header.html
+../_views/partials/head.html
+../_views/wrappers/html5.html
+markdown.pot
+perl.pot

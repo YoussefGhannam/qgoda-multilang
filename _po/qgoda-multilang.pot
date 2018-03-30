@@ -1,0 +1,117 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR 'cantanea EOOD <http://www.cantanea.com/>'
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: 'Guido Flohr <guido.flohr@cantanea.com>'\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: \n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit"
+
+#: ../_views/components/archive.html:3
+msgid "January"
+msgstr ""
+
+#: ../_views/components/archive.html:3
+msgid "February"
+msgstr ""
+
+#: ../_views/components/archive.html:3
+msgid "March"
+msgstr ""
+
+#: ../_views/components/archive.html:3
+msgid "April"
+msgstr ""
+
+#: ../_views/components/archive.html:3
+msgid "May"
+msgstr ""
+
+#: ../_views/components/archive.html:3
+msgid "June"
+msgstr ""
+
+#: ../_views/components/archive.html:3
+msgid "July"
+msgstr ""
+
+#: ../_views/components/archive.html:3
+msgid "August"
+msgstr ""
+
+#: ../_views/components/archive.html:3
+msgid "September"
+msgstr ""
+
+#: ../_views/components/archive.html:3
+msgid "October"
+msgstr ""
+
+#: ../_views/components/archive.html:3
+msgid "November"
+msgstr ""
+
+#: ../_views/components/archive.html:3
+msgid "December"
+msgstr ""
+
+#: ../_views/components/archive.html:15
+msgid "Archive"
+msgstr ""
+
+#: ../_views/components/listing.html:15 ../_views/partials/body/header.html:25
+msgid "%B, %d %Y"
+msgstr ""
+
+#: ../_views/components/listing.html:21
+msgid "more"
+msgstr ""
+
+#: ../_views/components/listing.html:27
+msgid "Pagination"
+msgstr ""
+
+#: ../_views/components/listing.html:30
+msgid "Newer"
+msgstr ""
+
+#: ../_views/components/listing.html:44
+msgid "Older"
+msgstr ""
+
+#: ../_views/components/related.html:7
+msgid "See Also"
+msgstr ""
+
+#: ../_views/components/taglist.html:3
+msgid "Tags"
+msgstr ""
+
+#: ../_views/components/toc.html:4
+msgid "Table Of Contents"
+msgstr ""
+
+#: ../_views/partials/body/footer.html:3
+msgid "Qgoda example theme based on the blog template built for <a href=\"https://getbootstrap.com/\">Bootstrap</a> by <a href=\"https://twitter.com/mdo\">@mdo</a>."
+msgstr ""
+
+#: ../_views/partials/body/footer.html:5
+msgid "Back to top"
+msgstr ""
+
+#: ../_views/partials/body/header.html:10
+msgid "Home"
+msgstr ""
+
+#: ../_views/partials/body/header.html:13
+msgid "About"
+msgstr ""
+
