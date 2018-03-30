@@ -1,0 +1,31 @@
+[% USE q = Qgoda %]
+    <header>
+      <div class="blog-masthead">
+        <div class="container">
+          <nav class="nav">
+            <a class="nav-link[% IF (asset.name == 'home') 
+                                  || asset.type == 'post' %] active[% END %]" 
+               href="[% q.link(name => 'home') %]">
+              Home
+            </a>
+            <a class="nav-link[% IF asset.name == 'about' %] active[% END %]"
+               href="[% q.link(name = 'about') %]">About</a>
+          </nav>
+        </div>
+      </div>
+
+      <div class="blog-header">
+        <div class="container">
+          <h1 class="blog-title">[% asset.title | html %]</h1>
+          [% IF asset.subtitle %]
+          <h3>[% asset.subtitle | html %]</h3>
+          [% END %]
+          <p class="lead blog-description">
+          [% q.strftime('%B, %d %Y', asset.date) %]
+          by
+          [% asset.author | html %]
+          [% IF asset.organization %]- [% asset.organization | html %][% END %]
+          </p>
+        </div>
+      </div>
+    </header>

@@ -1,0 +1,5 @@
+// Import the Prism theme from here.  The cosmetic reason is that we want
+// the json file for css modules to be created out of node_modules.  And
+// furthermore, this will ensure that it is created before the custom-class
+// plug-in requires it.
+@import '../../node_modules/prismjs/themes/prism.css';

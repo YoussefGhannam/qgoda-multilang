@@ -1,0 +1,112 @@
+# YAML description for the theme qgoda-default.
+#
+# Reserved keys, do not use:
+#_srcdir: will contain the (local) checkout directory
+
+_exclude:
+  - /README.md
+  - /package.json
+  - /node_modules
+  - /package-lock.json
+  # These are always excluded.
+  # - /_config.yaml
+  # - /_config.yml
+_precious:
+  - '*.md'
+  - '*.markdown'
+  - '*.mkdn'
+  - /_js/index.js
+  - /_scss/_style.scss
+_tasks:
+  - node
+
+# Dev dependencies for npm.
+_node_dev_dependencies:
+  # Development web server.
+  - browser-sync
+  - ajv
+  # SCSS/SASS support.
+  - node-sass
+  # Bundling.
+  - webpack
+  - webpack-cli
+  # Webpack plug-ins
+  - extract-text-webpack-plugin@next
+  - clean-webpack-plugin
+  - timestamp-webpack-plugin
+  # Loaders for webpack.
+  - css-loader
+  - sass-loader
+  - postcss-loader
+  - file-loader
+  - url-loader
+  # Write latest and greatest CSS even for older browsers.
+  - postcss-scss
+  - postcss-cssnext
+  # Minimize CSS.
+  - cssnano
+  # Bootstrap and Dependencies.
+  - jquery
+  - popper.js
+  - tether
+  - bootstrap@4.0.0-beta
+  # Other packages
+  - font-awesome
+  - prismjs
+  - postcss-import
+  - postcss-modules
+  - postcss-font-magician
+
+# This gets merged into package.json.
+_package:
+  scripts:
+    prestart: 'npm install'
+    start: 'webpack --progress --colors --watch'
+    prebuild: 'npm install'
+    build: 'webpack --progress --colors'
+    server: 'browser-sync start --server _site --files _timestamp'
+    test: 'echo "Error: no test specified"; exit 1'
+
+# The rest goes into _config.yaml.
+title: Qgoda Webpack Seed Project
+exclude:
+  - /package.json
+  - /package.lock.json
+  - /node_modules
+  - /webpack.config.js
+  - /postcss.config.js
+  - /yarn.lock
+  - /LICENSE
+  - /README.md
+exclude_watch:
+  - "*.config.js"
+helpers:
+  webpack: npm start
+  'browser-sync': npm run server
+# We need fenced code blocks.
+processors:
+  chains:
+    markdown:
+      modules:
+      - TT2
+      - Hoedown
+defaults:
+  - files:
+      - '*.md'
+    values:
+      author: Guido Flohr
+      lingua: en-us
+      organization: cantanea EOOD
+      type: post
+  - files:
+      - index.md
+      - index-*.md
+    values:
+      priority: -1
+      type: page
+global:
+  scripts: [/assets/bundle.min.js]
+  styles: [/assets/bundle.min.css]
+# This is only needed for the theme documentation.  You can safely delete it,
+# if you don't need the theme docs any more.
+theme_repo: gflohr/qgoda-default
