@@ -78,11 +78,22 @@ exclude:
   - /yarn.lock
   - /LICENSE
   - /README.md
+  - /LocaleData
 exclude_watch:
   - "*.config.js"
+  - /assets
+  - "!/_timestamp.json"
 helpers:
   webpack: npm start
   'browser-sync': npm run server
+po:
+  textdomain: qgoda-multilang
+  msgid_bugs_address: Guido Flohr <guido.flohr@cantanea.com>
+  copyright_holder: cantanea EOOD <http://www.cantanea.com/>
+  views:
+    - /_views/**
+    - "!/_views/functions/**"
+  reload: 1
 # We need fenced code blocks.
 processors:
   chains:
@@ -109,4 +120,4 @@ global:
   styles: [/assets/bundle.min.css]
 # This is only needed for the theme documentation.  You can safely delete it,
 # if you don't need the theme docs any more.
-theme_repo: gflohr/qgoda-default
+theme_repo: gflohr/qgoda-multilang
