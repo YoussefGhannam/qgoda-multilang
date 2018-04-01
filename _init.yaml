@@ -107,8 +107,6 @@ defaults:
       - '*.md'
     values:
       author: Guido Flohr
-      lingua: en-us
-      organization: cantanea EOOD
       type: post
       translate:
         - title
@@ -120,6 +118,14 @@ defaults:
     values:
       priority: -1
       type: page
+  - files:
+      - /en
+    values:
+      lingua: en
+  - files:
+      - /de
+    values:
+      lingua: de
 global:
   scripts: [/assets/bundle.min.js]
   styles: [/assets/bundle.min.css]

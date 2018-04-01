@@ -1,8 +1,8 @@
 ---
 title: Qgoda Seed Project with Webpack
 name: home
-location: /index.html
-permalink: /
+location: /en/index.html
+permalink: /en/
 ---
 This is a project seed for [Qgoda](http://www.qgoda.net/).  It comes with
 module bundling via [webpack](https://webpack.js.org/) and advanced web
