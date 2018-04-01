@@ -1,7 +1,5 @@
 ---
-master: /de/index.md
-subtitle:
-tags:
+master: /en/index.md
 location: /de/index.html
 permalink: /de/
 ---

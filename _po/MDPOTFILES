@@ -1,6 +1,5 @@
-../de/index.md
 ../en/about.md
-../en/archive.md
+../en/archive/index.md
 ../en/docs/archives.md
 ../en/docs/configuration.md
 ../en/docs/css-and-javascript.md
@@ -8,7 +7,9 @@
 ../en/docs/nodejs.md
 ../en/docs/related.md
 ../en/docs/site-structure.md
+../en/docs/starting-qgoda.md
 ../en/docs/tags.md
 ../en/docs/template-setup.md
 ../en/docs/templates.md
-../en/tags.md
+../en/index.md
+../en/tags/index.md

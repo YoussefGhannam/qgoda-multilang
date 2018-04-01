@@ -1,5 +1,4 @@
 ---
-type: page
 virtual: 1
 ---
 <!--QGODA-NO-XGETTEXT-->

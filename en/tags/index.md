@@ -1,6 +1,5 @@
 ---
 virtual: 1
-type: page
 ---
 [% USE q = Qgoda %]
 

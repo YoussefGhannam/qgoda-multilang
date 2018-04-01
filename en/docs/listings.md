@@ -4,11 +4,12 @@ name: listings
 date: 2018-02-05
 tags: [ Listings, Pagination, Cloning, Templates ]
 ---
+Listings of posts are explained in great detail on the [Qgoda website](http://www.qgoda.net/en/docs/listings/), so you should look there for starters.  Here, we will just cover the things that are special in this theme.
+
 <!--QGODA-NO-XGETTEXT-->
 [% USE q = Qgoda %]
 [% TAGS [@ @] %]
 <!--/QGODA-NO-XGETTEXT-->
-Listings of posts are explained in great detail on the [Qgoda website](http://www.qgoda.net/en/docs/listings/), so you should look there for starters.  Here, we will just cover the things that are special in this theme.
 
 ## General Syntax
 

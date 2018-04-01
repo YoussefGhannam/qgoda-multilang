@@ -117,7 +117,7 @@ defaults:
       - index-*.md
     values:
       priority: -1
-      type: page
+      type: listing 
   - files:
       - /en
     values:

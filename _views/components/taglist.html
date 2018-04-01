@@ -3,6 +3,6 @@
 <h4>[% gtx.gettext('Tags') %]</h4>
 <p class="[% css.main.taglist %]">
 [% FOREACH tag IN q.ltaxonomyValues('tags') %]
-<a class="[% css.main.taglist_link %]" href="/tags/[% tag.slugify(asset.lingua)  %]/">#[% tag %]</a>
+<a class="[% css.main.taglist_link %]" href="/[% asset.lingua %]/tags/[% tag.slugify(asset.lingua)  %]/"><i class="fa fa-tag"></i>[% tag %]</a>
 [% END %]
 </p>

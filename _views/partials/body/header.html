@@ -4,8 +4,8 @@
       <div class="blog-masthead">
         <div class="container">
           <nav class="nav">
-            <a class="nav-link[% IF (asset.name == 'home') 
-                                  || asset.type == 'post' %] active[% END %]" 
+            <a class="nav-link[% IF (asset.type == 'post') 
+                                  || asset.type == 'listing' %] active[% END %]" 
                href="[% q.llink(name => 'home') %]">
               [% gtx.gettext('Home') %]
             </a>
@@ -22,7 +22,7 @@
           <h3>[% asset.subtitle | html %]</h3>
           [% END %]
           <p class="lead blog-description">
-          [% q.strftime(gtx.gettext('%B, %d %Y'), asset.date) %]
+          <i class="fa fa-clock"></i>&nbsp;[% q.strftime(gtx.gettext('%B, %d %Y'), asset.date) %]
           &mdash;
           [% asset.author | html -%]
           [%- IF asset.organization %], [% asset.organization | html %][% END %]

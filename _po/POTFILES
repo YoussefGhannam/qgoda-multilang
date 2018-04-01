@@ -1,4 +1,5 @@
 ../_views/components/archive.html
+../_views/components/lingua-select.html
 ../_views/components/listing.html
 ../_views/components/related.html
 ../_views/components/taglist.html

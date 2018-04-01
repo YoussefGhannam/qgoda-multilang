@@ -26,7 +26,7 @@ msgstr "Februar"
 
 #: ../_views/components/archive.html:3
 msgid "March"
-msgstr "März"
+msgstr "M&auml;rz"
 
 #: ../_views/components/archive.html:3
 msgid "April"
@@ -122,27 +122,12 @@ msgstr "Startseite"
 msgid "About"
 msgstr "Info"
 
-#: ../de/index.md:
-msgctxt "title"
-msgid ""
-msgstr ""
-
-#: ../de/index.md:3
-msgctxt "subtitle"
-msgid ""
-msgstr ""
-
-#: ../de/index.md:4
-msgctxt "tags"
-msgid ""
-msgstr ""
-
 #: ../en/about.md:2
 msgctxt "title"
 msgid "About Qgoda-Default"
 msgstr ""
 
-#: ../en/about.md:6
+#: ../en/about.md:6 ../en/index.md:7
 msgid ""
 "This is a project seed for [Qgoda](http://www.qgoda.net/).  It comes with\n"
 "module bundling via [webpack](https://webpack.js.org/) and advanced web\n"
@@ -156,7 +141,7 @@ msgid ""
 "development environment."
 msgstr ""
 
-#: ../en/about.md:14
+#: ../en/about.md:14 ../en/index.md:15
 msgid ""
 "See [https://github.com/[% config.theme_repo %]](https://github.com/[% "
 "config.theme_repo %])\n"
@@ -166,12 +151,10 @@ msgid ""
 "documentation."
 msgstr ""
 
-#: ../en/archive.md:
-#, fuzzy
-#| msgid "Archive"
+#: ../en/archive/index.md: ../en/tags/index.md:
 msgctxt "title"
-msgid "archive"
-msgstr "Archiv"
+msgid "index"
+msgstr ""
 
 #: ../en/docs/archives.md:2
 #, fuzzy
@@ -181,16 +164,19 @@ msgid "Archives"
 msgstr "Archiv"
 
 #: ../en/docs/archives.md:5 ../en/docs/tags.md:5
+msgctxt "tags.5"
+msgid "Templates"
+msgstr ""
+
+#: ../en/docs/archives.md:5 ../en/docs/tags.md:5
 msgctxt "tags.1"
 msgid "Listings"
 msgstr ""
 
 #: ../en/docs/archives.md:5 ../en/docs/tags.md:5
-#, fuzzy
-#| msgid "Pagination"
-msgctxt "tags.2"
-msgid "Pagination"
-msgstr "Paginierung"
+msgctxt "tags.3"
+msgid "Cloning"
+msgstr ""
 
 #: ../en/docs/archives.md:5
 #, fuzzy
@@ -205,23 +191,20 @@ msgid "Virtual Pages"
 msgstr ""
 
 #: ../en/docs/archives.md:5 ../en/docs/tags.md:5
-msgctxt "tags.5"
-msgid "Templates"
-msgstr ""
+#, fuzzy
+#| msgid "Pagination"
+msgctxt "tags.2"
+msgid "Pagination"
+msgstr "Paginierung"
 
-#: ../en/docs/archives.md:5 ../en/docs/tags.md:5
-msgctxt "tags.3"
-msgid "Cloning"
-msgstr ""
-
-#: ../en/docs/archives.md:11
+#: ../en/docs/archives.md:7
 msgid ""
 "Archives of posts are explained in great detail on the [Qgoda website]"
 "(http://www.qgoda.net/en/docs/archives/), so you should look there for "
 "starters."
 msgstr ""
 
-#: ../en/docs/archives.md:13
+#: ../en/docs/archives.md:9
 msgid ""
 "Even without reading the detailed documentation, the source code of [`_views/"
 "components/archive/aside.html`](https://github.com/gflohr/qgoda-essential/"
@@ -230,12 +213,45 @@ msgid ""
 "of archive pages in the right column of this page."
 msgstr ""
 
-#: ../en/docs/archives.md:15
+#: ../en/docs/archives.md:11
 msgid ""
 "The tricky part is again the generation of an unknown, arbitrary number of "
 "archive pages.  And again, it's the [cloning feature](http://www.qgoda.net/"
 "en/docs/cloning/) that comes to our rescue.  This is the source code of "
 "`archive/index.md`:"
+msgstr ""
+
+#: ../en/docs/archives.md:18
+msgid ""
+"```tt2\n"
+"---\n"
+"virtual: 1\n"
+"---\n"
+"[% USE q = Qgoda %]"
+msgstr ""
+
+#: ../en/docs/archives.md:24
+msgid ""
+"[% IF !asset.parent %]\n"
+"  [% FOREACH year IN q.llistPosts().vmap('date.year').unique() %]\n"
+"    [% FOREACH imonth IN q.llistPosts('date.year' = year).vmap('date."
+"imonth').unique() %]\n"
+"      [% location = q.sprintf(\"/archive/%04u/%02u/index.html\", year, "
+"imonth) %]\n"
+"      [% q.clone(location => location\n"
+"                 plocation => location\n"
+"                 title => q.sprintf(\"Posts from %04u/%02u\", year, "
+"imonth) \n"
+"                 year => year imonth => imonth\n"
+"                 start => 0) %]\n"
+"    [% END %]\n"
+"  [% END %]\n"
+"[% ELSE %]\n"
+"  [% filters = { 'date.year' = year 'date.imonth' = imonth } %]\n"
+"  [% INCLUDE components/listing.html filters = filters %]\n"
+"[% END %]\n"
+"```\n"
+"<!--/QGODA-NO-XGETTEXT-->"
 msgstr ""
 
 #: ../en/docs/archives.md:42
@@ -283,7 +299,7 @@ msgstr ""
 
 #: ../en/docs/configuration.md:5 ../en/docs/css-and-javascript.md:5
 #: ../en/docs/nodejs.md:5 ../en/docs/site-structure.md:5
-#: ../en/docs/templates.md:5
+#: ../en/docs/starting-qgoda.md:5 ../en/docs/templates.md:5
 msgctxt "tags.0"
 msgid "General"
 msgstr ""
@@ -472,18 +488,18 @@ msgid "Templates"
 msgstr ""
 
 #: ../en/docs/listings.md:5
-msgctxt "tags.2"
-msgid "Cloning"
-msgstr ""
-
-#: ../en/docs/listings.md:5
 #, fuzzy
 #| msgid "Pagination"
 msgctxt "tags.1"
 msgid "Pagination"
 msgstr "Paginierung"
 
-#: ../en/docs/listings.md:11
+#: ../en/docs/listings.md:5
+msgctxt "tags.2"
+msgid "Cloning"
+msgstr ""
+
+#: ../en/docs/listings.md:7
 msgid ""
 "Listings of posts are explained in great detail on the [Qgoda website]"
 "(http://www.qgoda.net/en/docs/listings/), so you should look there for "
@@ -491,37 +507,37 @@ msgid ""
 "theme."
 msgstr ""
 
-#: ../en/docs/listings.md:13
+#: ../en/docs/listings.md:14
 msgid "## General Syntax"
 msgstr ""
 
-#: ../en/docs/listings.md:15
+#: ../en/docs/listings.md:16
 msgid "Listings, in general, take one of the following forms in Qgoda:"
 msgstr ""
 
-#: ../en/docs/listings.md:27
+#: ../en/docs/listings.md:28
 msgid ""
 "This will list all posts in the site that have the same language, and sort "
 "them by date in descending order.  By the way, `llistPosts()` is not a typo "
 "but the equivalent of this:"
 msgstr ""
 
-#: ../en/docs/listings.md:35
+#: ../en/docs/listings.md:36
 msgid ""
 "The leading \"l\" in `llistPosts` stands for `lingua`, and automatically "
 "adds a filter that only selects posts in the same language as the listing "
 "page itself."
 msgstr ""
 
-#: ../en/docs/listings.md:37
+#: ../en/docs/listings.md:38
 msgid "And the invocation of `listPosts` is actually a synonym for this:"
 msgstr ""
 
-#: ../en/docs/listings.md:45
+#: ../en/docs/listings.md:46
 msgid "## Parametrizing Listings"
 msgstr ""
 
-#: ../en/docs/listings.md:47
+#: ../en/docs/listings.md:48
 msgid ""
 "When you look into the source code of [`_views/components/listing.html`]"
 "(https://github.com/gflohr/qgoda-essential/blob/master/_views/components/"
@@ -530,26 +546,26 @@ msgid ""
 "that it can be reused for different types of listings.  This is easy:"
 msgstr ""
 
-#: ../en/docs/listings.md:55
+#: ../en/docs/listings.md:56
 msgid ""
 "Now the variable `filters` can contain arbitrary filters.  If you `INCLUDE` "
 "the component without filters, the default will be used, that lists *all* "
 "posts like show on the [start page]([% q.llink(name = 'home') %])."
 msgstr ""
 
-#: ../en/docs/listings.md:57
+#: ../en/docs/listings.md:58
 msgid "But you can also search for all posts from June 2015 like this:"
 msgstr ""
 
-#: ../en/docs/listings.md:67
+#: ../en/docs/listings.md:68
 msgid "Or search for all posts for the tag 'CSS':"
 msgstr ""
 
-#: ../en/docs/listings.md:76
+#: ../en/docs/listings.md:77
 msgid "## Combining Listings With Pagination"
 msgstr ""
 
-#: ../en/docs/listings.md:78
+#: ../en/docs/listings.md:79
 msgid ""
 "You will often distribute long listings over multiple pages.  This is called "
 "*pagination* and explained at http://www.qgoda.net/en/docs/pagination/.  The "
@@ -557,7 +573,7 @@ msgid ""
 "you feed the set of posts into the Qgoda plug-in function `paginate()`:"
 msgstr ""
 
-#: ../en/docs/listings.md:89
+#: ../en/docs/listings.md:90
 msgid ""
 "The parameters `start` and `total` are mandatory. The parameter `per_page` "
 "defaults to 10 (and could be omitted here).  The method does really not do "
@@ -568,7 +584,7 @@ msgid ""
 "for generating a list of links to the individual pages."
 msgstr ""
 
-#: ../en/docs/listings.md:91
+#: ../en/docs/listings.md:92
 msgid ""
 "But that is the trivial part of pagination.  We now must generate an unknown "
 "number of more listing pages.  The first page displays posts number 1 to 10, "
@@ -576,7 +592,7 @@ msgid ""
 "need."
 msgstr ""
 
-#: ../en/docs/listings.md:93
+#: ../en/docs/listings.md:94
 msgid ""
 "The solution used by Qgoda is embarrassingly simple: Qgoda documents have "
 "the ability to *reproduce*.  You can create an exact clone of the document "
@@ -584,7 +600,7 @@ msgid ""
 "mutated DNA:"
 msgstr ""
 
-#: ../en/docs/listings.md:103
+#: ../en/docs/listings.md:104
 msgid ""
 "The method `Qgoda.clone()` has one mandatory named argument, the `location` "
 "of the cloned document and `Qgoda.paginate()` was kind enough to return a "
@@ -594,17 +610,17 @@ msgid ""
 "location`, `asset.start`, ...) in the clone document."
 msgstr ""
 
-#: ../en/docs/listings.md:105
+#: ../en/docs/listings.md:106
 msgid ""
 "The effect of all this is that the listings duplicate themselves until they "
 "have covered the entire set of posts.  Simple, isn't it?"
 msgstr ""
 
-#: ../en/docs/listings.md:107
+#: ../en/docs/listings.md:108
 msgid "## Mixing TT2 Code With Markdown"
 msgstr ""
 
-#: ../en/docs/listings.md:109
+#: ../en/docs/listings.md:110
 msgid ""
 "Listings will very often be generated as part of Markdown documents.  That "
 "offers some very nasty pitfalls for you.  Read the [online documentation]"
@@ -612,7 +628,7 @@ msgid ""
 "the gory details."
 msgstr ""
 
-#: ../en/docs/listings.md:111
+#: ../en/docs/listings.md:112
 msgid ""
 "In brief: Markdown will occasionally throw in `<p>` elements, where the "
 "template processor left whitespace behind.  With Template Toolkit you can "
@@ -620,23 +636,23 @@ msgid ""
 msgstr ""
 
 # QGODA-NO-XGETTEXT
-#: ../en/docs/listings.md:113
+#: ../en/docs/listings.md:114
 msgid ""
 "```tt2\n"
 "[%- IF something -%]\n"
 "blab\n"
 "[%- END -%]\n"
 "```\n"
-"<!--QGODA-NO-XGETTEXT-->"
+"<!-/QGODA-NO-XGETTEXT-->"
 msgstr ""
 
-#: ../en/docs/listings.md:121
+#: ../en/docs/listings.md:122
 msgid ""
 "The form `[%- ... -%]` will eat up all adjacent whitespace and fix the "
 "problem."
 msgstr ""
 
-#: ../en/docs/listings.md:123
+#: ../en/docs/listings.md:124
 msgid "You can continue with [@ q.lanchor(name = 'archives') @] from here."
 msgstr ""
 
@@ -646,8 +662,8 @@ msgid "NodeJS"
 msgstr ""
 
 #: ../en/docs/nodejs.md:5
-msgctxt "tags.1"
-msgid "NodeJS"
+msgctxt "tags.4"
+msgid "Helpers"
 msgstr ""
 
 #: ../en/docs/nodejs.md:5
@@ -656,8 +672,8 @@ msgid "CSS"
 msgstr ""
 
 #: ../en/docs/nodejs.md:5
-msgctxt "tags.4"
-msgid "Helpers"
+msgctxt "tags.1"
+msgid "NodeJS"
 msgstr ""
 
 #: ../en/docs/nodejs.md:7
@@ -740,14 +756,14 @@ msgctxt "title"
 msgid "Related Documents"
 msgstr ""
 
-#: ../en/docs/related.md:5
-msgctxt "tags.0"
-msgid "Related Documents"
-msgstr ""
-
 #: ../en/docs/related.md:5 ../en/docs/templates.md:5
 msgctxt "tags.1"
 msgid "Templates"
+msgstr ""
+
+#: ../en/docs/related.md:5
+msgctxt "tags.0"
+msgid "Related Documents"
 msgstr ""
 
 #: ../en/docs/related.md:7
@@ -934,6 +950,43 @@ msgid ""
 "`_site` directory, possibly after running them through a processor chain."
 msgstr ""
 
+#: ../en/docs/starting-qgoda.md:2
+msgctxt "title"
+msgid "Starting Qgoda"
+msgstr ""
+
+#: ../en/docs/starting-qgoda.md:5
+msgctxt "tags.1"
+msgid "Installation"
+msgstr ""
+
+#: ../en/docs/starting-qgoda.md:7 ../en/tags/index.md:4
+msgid "[% USE q = Qgoda %]"
+msgstr ""
+
+#: ../en/docs/starting-qgoda.md:9
+msgid ""
+"Starting Qgoda is as easy as typing `qgoda watch` in the [installed]([% q."
+"llink(name = 'installation') %]) theme directory.  You can stop Qgoda by "
+"pressing `CTRL-C` or by closing the terminal window that it is running in."
+msgstr ""
+
+#: ../en/docs/starting-qgoda.md:11
+msgid ""
+"The command `qgoda watch` will start Qgoda in *watch mode*.  Qgoda will then "
+"build the entire site, and then wait for changes that will trigger a "
+"rebuild.  The only reason to restart Qgoda is a change to the [configuration]"
+"([% q.llink(name = 'configuration') %]) file `_config.yaml`."
+msgstr ""
+
+#: ../en/docs/starting-qgoda.md:13
+msgid "You can also just build the site once with `qgoda build`."
+msgstr ""
+
+#: ../en/docs/starting-qgoda.md:15
+msgid "Continue with [% q.lanchor(name = 'configuration') %]."
+msgstr ""
+
 #: ../en/docs/tags.md:2
 #, fuzzy
 #| msgid "Tags"
@@ -1037,6 +1090,11 @@ msgid "Template Setup"
 msgstr ""
 
 #: ../en/docs/template-setup.md:5
+msgctxt "tags.1"
+msgid "Cache-Busting"
+msgstr ""
+
+#: ../en/docs/template-setup.md:5
 msgctxt "tags.3"
 msgid "JavaScript"
 msgstr ""
@@ -1049,11 +1107,6 @@ msgstr ""
 #: ../en/docs/template-setup.md:5
 msgctxt "tags.2"
 msgid "CSS"
-msgstr ""
-
-#: ../en/docs/template-setup.md:5
-msgctxt "tags.1"
-msgid "Cache-Busting"
 msgstr ""
 
 #: ../en/docs/template-setup.md:7
@@ -1599,16 +1652,16 @@ msgid ""
 "You can continue with [@ q.lanchor(name = 'template-setup') @] from here."
 msgstr ""
 
-#: ../en/tags.md:
+#: ../en/index.md:2
 msgctxt "title"
-msgid "tags"
+msgid "Qgoda Seed Project with Webpack"
 msgstr ""
 
-#: ../en/tags.md:5
-msgid "[% USE q = Qgoda %]"
+#: ../en/index.md:19
+msgid "[% INCLUDE components/listing.html -%]"
 msgstr ""
 
-#: ../en/tags.md:7
+#: ../en/tags/index.md:6
 msgid ""
 "[% IF !asset.parent %]\n"
 "    [% FOREACH tag IN q.taxonomyValues('tags') %]\n"
@@ -1626,3 +1679,9 @@ msgid ""
 "  [% INCLUDE components/listing.html filters = filters %]\n"
 "[% END %]"
 msgstr ""
+
+#, fuzzy
+#~| msgid "Archive"
+#~ msgctxt "title"
+#~ msgid "archive"
+#~ msgstr "Archiv"

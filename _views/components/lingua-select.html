@@ -1,0 +1,6 @@
+[% USE q = Qgoda %]
+[% IF asset.lingua != 'de' %]
+<a href="[% q.link(name = asset.name lingua='de') %]">Auf Deutsch lesen</a>
+[% ELSE %]
+<a href="[% q.link(name = asset.name lingua='en') %]">Read in English</a>
+[% END %]
