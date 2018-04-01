@@ -13,7 +13,7 @@
     <h2 class="blog-post-title">[% post.title %]</h2>
     <p class="blog-post-meta">
         [% q.strftime(gtx.gettext('%B, %d %Y'), post.date) %] 
-        &emdash; 
+        &mdash;
         [% post.author | html -%]
         [%- IF post.organization %], [% post.organization | html %][% END %]
     </p>

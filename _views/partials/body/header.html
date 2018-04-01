@@ -23,7 +23,7 @@
           [% END %]
           <p class="lead blog-description">
           [% q.strftime(gtx.gettext('%B, %d %Y'), asset.date) %]
-          &emdash;
+          &mdash;
           [% asset.author | html -%]
           [%- IF asset.organization %], [% asset.organization | html %][% END %]
           </p>
