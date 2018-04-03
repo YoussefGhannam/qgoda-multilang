@@ -1,7 +1,7 @@
 ---
 title: General Information
 name: general-information
-date: 2018-04-05
+date: 2018-03-31
 tags: [ General ]
 ---
 [% USE q = Qgoda %]
