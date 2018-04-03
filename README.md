@@ -41,7 +41,7 @@ The theme can be used like this:
 ```shell
 $ mkdir qgoda-served
 $ cd qgoda-served
-$ qgoda init gflohr/qgoda-served
+$ qgoda init gflohr/qgoda-multilang
 ... a lot of output ...
 $ qgoda watch
 ```
