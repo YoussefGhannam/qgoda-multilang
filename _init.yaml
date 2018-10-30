@@ -68,7 +68,7 @@ _package:
     test: 'echo "Error: no test specified"; exit 1'
 
 # The rest goes into _config.yaml.
-title: Qgoda Webpack Seed Project
+title: Qgoda Multi-Language Seed Project
 exclude:
   - /package.json
   - /package.lock.json
@@ -91,7 +91,7 @@ po:
   textdomain: qgoda-multilang
   msgid_bugs_address: Guido Flohr <guido.flohr@cantanea.com>
   copyright_holder: cantanea EOOD <http://www.cantanea.com/>
-  views:
+  tt2:
     - /_views/**
     - "!/_views/functions/**"
   reload: 1
@@ -103,8 +103,7 @@ processors:
       - TT2
       - Hoedown
 defaults:
-  - files:
-      - '*.md'
+  - files: '*.md'
     values:
       author: Guido Flohr
       type: post
@@ -118,12 +117,10 @@ defaults:
     values:
       priority: -1
       type: listing 
-  - files:
-      - /en
+  - files: /en
     values:
       lingua: en
-  - files:
-      - /de
+  - files: /de
     values:
       lingua: de
 global:

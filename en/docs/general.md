@@ -5,6 +5,7 @@ date: 2018-03-31
 tags: [ General ]
 ---
 [% USE q = Qgoda %]
+This theme shows how to 
 This theme contains examples for most functionality of Qgoda and it also shows
 some best practices for organizing a Qgoda powered site.  It does *not* contain
 any fancy CSS styling or JavaScript.
