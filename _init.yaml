@@ -89,8 +89,8 @@ helpers:
 linguas: [en, de]
 po:
   textdomain: qgoda-multilang
-  msgid_bugs_address: Guido Flohr <guido.flohr@cantanea.com>
-  copyright_holder: cantanea EOOD <http://www.cantanea.com/>
+  msgid-bugs-address: Guido Flohr <guido.flohr@cantanea.com>
+  copyright-holder: cantanea EOOD <http://www.cantanea.com/>
   tt2:
     - /_views/**
     - "!/_views/functions/**"
