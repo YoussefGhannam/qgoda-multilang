@@ -7,7 +7,7 @@ permalink: /en/
 <!--QGODA-NO-XGETTEXT-->[% USE q = Qgoda %]<!--/QGODA-NO-XGETTEXXT-->
 
 This is a project seed for [Qgoda](http://www.qgoda.net/).  The theme is
-[multi-lingual]([% q.llink(name = 'multi-language') %]), comes with
+[multi-lingual](http://www.qgoda.net/en/docs/multilanguage-overview/), comes with
 module bundling via [webpack](https://webpack.js.org/) and advanced web
 development features, a development web server, and it shows Qgoda best practices
 and example code for almost all functionality available in Qgoda.

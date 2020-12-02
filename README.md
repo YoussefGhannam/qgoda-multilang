@@ -1,7 +1,9 @@
-# Qgoda-essential
+# Qgoda-Multilang
 
-Full-blown theme for Qgoda with webpack, development web server, listings,
-paging, PostCSS, syntax highlighting via PrismJS, ...
+A complete starter project for a multi-lingual [Qgoda](http://www.qgoda.net)\
+site. Apart from that it's a full-blown theme for Qgoda with webpack,
+development web server, listings, pagination, PostCSS, syntax highlighting
+via PrismJS, ...
 
 ## Description
 
